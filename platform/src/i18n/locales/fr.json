@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "getStarted": "Commencer",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "loading": "Chargement...",
+    "needAccount": "Besoin d'un compte ? Inscrivez-vous",
+    "haveAccount": "Déjà un compte ? Connectez-vous",
+    "signInSuccess": "Connexion réussie !",
+    "signUpSuccess": "Compte créé avec succès !",
+    "signOutSuccess": "Déconnexion réussie !",
+    "passwordRequirements": "Le mot de passe ne répond pas aux exigences",
+    "emailVerificationNote": "Après l'inscription, vous devrez vérifier votre adresse email. Veuillez vérifier votre boîte de réception pour le lien de vérification.",
+    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte"
+  },
+  "password": {
+    "minLength": "Au moins 8 caractères",
+    "upperCase": "Au moins une lettre majuscule",
+    "lowerCase": "Au moins une lettre minuscule",
+    "number": "Au moins un chiffre",
+    "special": "Au moins un caractère spécial"
+  },
+  "hero": {
+    "title1": "Gérez Votre Salle",
+    "title2": "Plus Intelligemment",
+    "description": "La plateforme tout-en-un pour la gestion moderne des salles de sport. Optimisez vos opérations, augmentez l'engagement des membres et développez votre entreprise.",
+    "startTrial": "Essai Gratuit",
+    "bookDemo": "Réserver une Démo"
+  },
+  "features": {
+    "title": "Tout ce dont vous avez besoin pour gérer votre salle",
+    "subtitle": "Des fonctionnalités puissantes conçues pour faciliter la gestion",
+    "memberManagement": {
+      "title": "Gestion des Membres",
+      "description": "Suivez les adhésions, la fréquentation et les progrès des membres en un seul endroit."
+    },
+    "classScheduling": {
+      "title": "Planification des Cours",
+      "description": "Calendrier facile à utiliser pour gérer les cours et les rendez-vous."
+    },
+    "paymentProcessing": {
+      "title": "Traitement des Paiements",
+      "description": "Système de paiement sécurisé et facturation automatisée."
+    },
+    "analytics": {
+      "title": "Analyses et Rapports",
+      "description": "Aperçus détaillés des performances et de la croissance de votre salle."
+    }
+  }
+}

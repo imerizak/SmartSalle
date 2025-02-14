@@ -1,0 +1,13 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0H800V200H0V0Z" fill="none"/>
+  <text x="50" y="130" fill="url(#yellow-gradient)" style="font-size: 100px; font-weight: bold;">SMART</text>
+  <path d="M350 40 H450V160H350V40Z" fill="url(#yellow-gradient)" stroke="url(#yellow-gradient)" stroke-width="8"/>
+  <path d="M380 90 L420 90 L400 120 L380 90Z" fill="#1F2937"/>
+  <text x="500" y="130" fill="url(#yellow-gradient)" style="font-size: 100px; font-weight: bold;">SALLE</text>
+  <defs>
+    <linearGradient id="yellow-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#FCD34D"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+  </defs>
+</svg>

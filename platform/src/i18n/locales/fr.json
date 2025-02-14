@@ -5,29 +5,71 @@
     "contact": "Contact",
     "getStarted": "Commencer",
     "signIn": "Se connecter",
-    "signOut": "Se déconnecter"
+    "signOut": "Se déconnecter",
+    "dashboard": "Tableau de bord"
   },
   "auth": {
     "signIn": "Se connecter",
     "signUp": "S'inscrire",
-    "email": "Email",
+    "email": "Adresse email",
     "password": "Mot de passe",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "organization": "Nom de l'organisation",
+    "organizationPlaceholder": "Entrez le nom de votre salle de sport",
     "loading": "Chargement...",
-    "needAccount": "Besoin d'un compte ? Inscrivez-vous",
+    "needAccount": "Pas de compte ? Inscrivez-vous",
     "haveAccount": "Déjà un compte ? Connectez-vous",
     "signInSuccess": "Connexion réussie !",
     "signUpSuccess": "Compte créé avec succès !",
     "signOutSuccess": "Déconnexion réussie !",
-    "passwordRequirements": "Le mot de passe ne répond pas aux exigences",
+    "passwordRequirements": "Le mot de passe ne répond pas aux exigences de sécurité",
     "emailVerificationNote": "Après l'inscription, vous devrez vérifier votre adresse email. Veuillez vérifier votre boîte de réception pour le lien de vérification.",
-    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte"
+    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte",
+    "emailVerified": "Email vérifié avec succès !"
+  },
+  "dashboard": {
+    "overview": "Vue d'ensemble",
+    "members": "Membres",
+    "schedule": "Planning",
+    "payments": "Paiements",
+    "analytics": "Analyses",
+    "settings": "Paramètres",
+    "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
+    "organizationInfo": "Gestion de : {organization}",
+    "quickStats": "Statistiques rapides",
+    "recentActivity": "Activité récente",
+    "upcomingClasses": "Cours à venir",
+    "activeMembers": "Membres actifs",
+    "monthlyRevenue": "Revenu mensuel",
+    "profile": "Profil",
+    "notifications": "Notifications",
+    "help": "Aide",
+    "memberStats": {
+      "total": "Total des membres",
+      "active": "Membres actifs",
+      "new": "Nouveaux membres",
+      "expired": "Adhésions expirées"
+    },
+    "financialStats": {
+      "revenue": "Revenus",
+      "expenses": "Dépenses",
+      "profit": "Bénéfice",
+      "pending": "Paiements en attente"
+    },
+    "classStats": {
+      "scheduled": "Cours programmés",
+      "completed": "Cours terminés",
+      "cancelled": "Cours annulés",
+      "attendance": "Taux de participation"
+    }
   },
   "password": {
     "minLength": "Au moins 8 caractères",
-    "upperCase": "Au moins une lettre majuscule",
-    "lowerCase": "Au moins une lettre minuscule",
-    "number": "Au moins un chiffre",
-    "special": "Au moins un caractère spécial"
+    "upperCase": "Au moins une lettre majuscule (A-Z)",
+    "lowerCase": "Au moins une lettre minuscule (a-z)",
+    "number": "Au moins un chiffre (0-9)",
+    "special": "Au moins un caractère spécial (!@#$%^&*)"
   },
   "hero": {
     "title1": "Gérez Votre Salle",
@@ -37,23 +79,23 @@
     "bookDemo": "Réserver une Démo"
   },
   "features": {
-    "title": "Tout ce dont vous avez besoin pour gérer votre salle",
-    "subtitle": "Des fonctionnalités puissantes conçues pour faciliter la gestion",
+    "title": "Tout ce dont vous avez besoin",
+    "subtitle": "Des fonctionnalités puissantes pour une gestion efficace",
     "memberManagement": {
       "title": "Gestion des Membres",
-      "description": "Suivez les adhésions, la fréquentation et les progrès des membres en un seul endroit."
+      "description": "Suivez les adhésions, la fréquentation et les progrès des membres."
     },
     "classScheduling": {
       "title": "Planification des Cours",
-      "description": "Calendrier facile à utiliser pour gérer les cours et les rendez-vous."
+      "description": "Calendrier intuitif pour la gestion des cours et rendez-vous."
     },
     "paymentProcessing": {
-      "title": "Traitement des Paiements",
+      "title": "Gestion des Paiements",
       "description": "Système de paiement sécurisé et facturation automatisée."
     },
     "analytics": {
       "title": "Analyses et Rapports",
-      "description": "Aperçus détaillés des performances et de la croissance de votre salle."
+      "description": "Insights détaillés sur les performances de votre salle."
     }
   }
 }

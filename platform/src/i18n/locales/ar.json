@@ -5,29 +5,71 @@
     "contact": "اتصل بنا",
     "getStarted": "ابدأ الآن",
     "signIn": "تسجيل الدخول",
-    "signOut": "تسجيل الخروج"
+    "signOut": "تسجيل الخروج",
+    "dashboard": "لوحة التحكم"
   },
   "auth": {
     "signIn": "تسجيل الدخول",
     "signUp": "إنشاء حساب",
     "email": "البريد الإلكتروني",
     "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "organization": "اسم المنظمة",
+    "organizationPlaceholder": "أدخل اسم صالتك الرياضية",
     "loading": "جاري التحميل...",
-    "needAccount": "بحاجة إلى حساب؟ سجل الآن",
+    "needAccount": "ليس لديك حساب؟ سجل الآن",
     "haveAccount": "لديك حساب بالفعل؟ سجل دخولك",
     "signInSuccess": "تم تسجيل الدخول بنجاح!",
     "signUpSuccess": "تم إنشاء الحساب بنجاح!",
     "signOutSuccess": "تم تسجيل الخروج بنجاح!",
-    "passwordRequirements": "كلمة المرور لا تلبي المتطلبات",
+    "passwordRequirements": "كلمة المرور لا تلبي متطلبات الأمان",
     "emailVerificationNote": "بعد التسجيل، ستحتاج إلى تأكيد بريدك الإلكتروني. يرجى التحقق من صندوق الوارد للحصول على رابط التأكيد.",
-    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك"
+    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك",
+    "emailVerified": "تم التحقق من البريد الإلكتروني بنجاح!"
+  },
+  "dashboard": {
+    "overview": "نظرة عامة",
+    "members": "الأعضاء",
+    "schedule": "الجدول",
+    "payments": "المدفوعات",
+    "analytics": "التحليلات",
+    "settings": "الإعدادات",
+    "welcomeMessage": "مرحباً بك في لوحة تحكم SmartSalle",
+    "organizationInfo": "إدارة: {organization}",
+    "quickStats": "إحصائيات سريعة",
+    "recentActivity": "النشاط الأخير",
+    "upcomingClasses": "الحصص القادمة",
+    "activeMembers": "الأعضاء النشطين",
+    "monthlyRevenue": "الإيرادات الشهرية",
+    "profile": "الملف الشخصي",
+    "notifications": "الإشعارات",
+    "help": "المساعدة",
+    "memberStats": {
+      "total": "إجمالي الأعضاء",
+      "active": "الأعضاء النشطين",
+      "new": "الأعضاء الجدد",
+      "expired": "العضويات المنتهية"
+    },
+    "financialStats": {
+      "revenue": "الإيرادات",
+      "expenses": "المصروفات",
+      "profit": "الأرباح",
+      "pending": "المدفوعات المعلقة"
+    },
+    "classStats": {
+      "scheduled": "الحصص المجدولة",
+      "completed": "الحصص المكتملة",
+      "cancelled": "الحصص الملغاة",
+      "attendance": "نسبة الحضور"
+    }
   },
   "password": {
     "minLength": "٨ أحرف على الأقل",
-    "upperCase": "حرف كبير واحد على الأقل",
-    "lowerCase": "حرف صغير واحد على الأقل",
-    "number": "رقم واحد على الأقل",
-    "special": "رمز خاص واحد على الأقل"
+    "upperCase": "حرف كبير واحد على الأقل (A-Z)",
+    "lowerCase": "حرف صغير واحد على الأقل (a-z)",
+    "number": "رقم واحد على الأقل (0-9)",
+    "special": "رمز خاص واحد على الأقل (!@#$%^&*)"
   },
   "hero": {
     "title1": "أدر صالتك الرياضية",

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import AuthModal from './AuthModal';
+import Logo from './Logo';
 import toast from 'react-hot-toast';
 
 export default function Navbar() {
@@ -23,29 +24,29 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white shadow-lg">
+      <nav className="bg-secondary text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between h-16">
+          <div className="flex justify-between h-20">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary">SmartSalle</span>
+              <Logo size="large" />
             </div>
             
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#features" className="text-gray-700 hover:text-primary">{t('nav.features')}</a>
-              <a href="#pricing" className="text-gray-700 hover:text-primary">{t('nav.pricing')}</a>
-              <a href="#contact" className="text-gray-700 hover:text-primary">{t('nav.contact')}</a>
+              <a href="#features" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.features')}</a>
+              <a href="#pricing" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.pricing')}</a>
+              <a href="#contact" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.contact')}</a>
               <LanguageSwitcher />
               {user ? (
                 <button 
                   onClick={handleSignOut}
-                  className="text-gray-700 hover:text-primary"
+                  className="text-gray-300 hover:text-primary-light transition-colors"
                 >
                   {t('nav.signOut')}
                 </button>
               ) : (
                 <button 
                   onClick={() => setShowAuthModal(true)}
-                  className="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition-colors"
+                  className="bg-gradient-primary text-secondary px-6 py-2 rounded-md hover:opacity-90 transition-opacity font-medium"
                 >
                   {t('nav.signIn')}
                 </button>
@@ -54,7 +55,7 @@ export default function Navbar() {
 
             <div className="md:hidden flex items-center gap-4">
               <LanguageSwitcher />
-              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
+              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300">
                 {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
             </div>
@@ -62,22 +63,22 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden bg-secondary-light">
             <div className="px-4 pt-2 pb-3 space-y-3">
-              <a href="#features" className="block text-gray-700 hover:text-primary">{t('nav.features')}</a>
-              <a href="#pricing" className="block text-gray-700 hover:text-primary">{t('nav.pricing')}</a>
-              <a href="#contact" className="block text-gray-700 hover:text-primary">{t('nav.contact')}</a>
+              <a href="#features" className="block text-gray-300 hover:text-primary-light">{t('nav.features')}</a>
+              <a href="#pricing" className="block text-gray-300 hover:text-primary-light">{t('nav.pricing')}</a>
+              <a href="#contact" className="block text-gray-300 hover:text-primary-light">{t('nav.contact')}</a>
               {user ? (
                 <button 
                   onClick={handleSignOut}
-                  className="w-full text-left text-gray-700 hover:text-primary"
+                  className="block w-full text-left text-gray-300 hover:text-primary-light"
                 >
                   {t('nav.signOut')}
                 </button>
               ) : (
                 <button 
                   onClick={() => setShowAuthModal(true)}
-                  className="w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition-colors"
+                  className="w-full bg-gradient-primary text-secondary px-4 py-2 rounded-md hover:opacity-90 transition-opacity font-medium"
                 >
                   {t('nav.signIn')}
                 </button>

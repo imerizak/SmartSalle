@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #F59E0B;
+  --primary-light: #FCD34D;
+  --primary-dark: #D97706;
+  --secondary: #1F2937;
+  --secondary-light: #374151;
+  --secondary-dark: #111827;
+}
+
 body {
   @apply bg-gray-50;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo-text {
+  @apply font-extrabold tracking-wider;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  @apply font-bold;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* RTL Support */

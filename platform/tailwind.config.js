@@ -7,22 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2563eb',
-        secondary: '#1e40af',
+        primary: {
+          DEFAULT: '#F59E0B',
+          light: '#FCD34D',
+          dark: '#D97706',
+        },
+        secondary: {
+          DEFAULT: '#1F2937',
+          light: '#374151',
+          dark: '#111827',
+        }
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(135deg, #FCD34D, #F59E0B)',
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
+      fontSize: {
+        'logo': ['2.5rem', { lineHeight: '1', fontWeight: '800' }],
       }
     },
   },
   plugins: [],
-  // Add RTL support
-  theme: {
-    extend: {
-      colors: {
-        primary: '#2563eb',
-        secondary: '#1e40af',
-      },
-      spacing: {
-        'rtl-space': 'var(--rtl-space)',
-      },
-    },
-  },
 }

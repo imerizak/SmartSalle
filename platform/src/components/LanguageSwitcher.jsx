@@ -16,7 +16,7 @@ const languages = [
   {
     code: 'ar',
     name: 'العربية',
-    flag: '🇲🇦'
+    flag: '🇸🇦'
   }
 ];
 

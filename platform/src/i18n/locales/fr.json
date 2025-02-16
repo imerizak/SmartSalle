@@ -8,59 +8,53 @@
     "signOut": "Se déconnecter",
     "dashboard": "Tableau de bord"
   },
-  "dashboard": {
-    "overview": "Vue d'ensemble",
-    "members": "Membres",
-    "attendance": "Présences",
-    "schedule": "Planning",
-    "payments": "Paiements",
-    "analytics": "Analyses",
-    "settings": "Paramètres",
-    "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
-    "organizationInfo": "Gestion de : {organization}",
-    "graphs": {
-      "membershipTrend": "Tendance des adhésions",
-      "totalMembers": "Total des membres",
-      "newMembers": "Nouveaux membres",
-      "revenueChart": "Graphique des revenus",
-      "attendanceChart": "Graphique des présences"
+  "hero": {
+    "title1": "Gérez Votre Salle",
+    "title2": "Comme Jamais Auparavant"
+  },
+  "features": {
+    "title": "Tout ce dont vous avez besoin",
+    "subtitle": "Des outils puissants pour gérer votre entreprise de fitness",
+    "memberManagement": {
+      "title": "Gestion des membres",
+      "description": "Suivez les adhésions, les paiements et la présence facilement"
     },
-    "stats": {
-      "activeMembers": "Membres actifs",
-      "monthlyRevenue": "Revenu mensuel",
-      "classAttendance": "Participation aux cours",
-      "upcomingClasses": "Cours à venir",
-      "totalRevenue": "Revenu total",
-      "newMemberships": "Nouvelles adhésions",
-      "activeClasses": "Cours actifs"
+    "classScheduling": {
+      "title": "Planification des cours",
+      "description": "Organisez les cours et gérez les réservations efficacement"
     },
-    "activity": {
-      "title": "Activité récente",
-      "newMember": "Nouveau membre inscrit",
-      "classBooked": "Cours réservé",
-      "paymentReceived": "Paiement reçu",
-      "membershipRenewed": "Adhésion renouvelée",
-      "classCompleted": "Cours terminé",
-      "timeAgo": "il y a {time}"
+    "paymentProcessing": {
+      "title": "Traitement des paiements",
+      "description": "Gérez les paiements et les abonnements en toute simplicité"
     },
-    "quickActions": {
-      "title": "Actions rapides",
-      "addMember": "Ajouter un membre",
-      "createClass": "Créer un cours",
-      "recordPayment": "Enregistrer un paiement",
-      "sendAnnouncement": "Envoyer une annonce"
-    },
-    "notifications": {
-      "title": "Notifications",
-      "markAllRead": "Tout marquer comme lu",
-      "viewAll": "Voir toutes les notifications",
-      "noNotifications": "Aucune nouvelle notification"
-    },
-    "profile": {
-      "viewProfile": "Voir le profil",
-      "editProfile": "Modifier le profil",
-      "settings": "Paramètres",
-      "help": "Aide et support"
+    "analytics": {
+      "title": "Analyses et rapports",
+      "description": "Prenez des décisions basées sur des données détaillées"
     }
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "fullName": "Nom complet",
+    "organization": "Nom de l'organisation",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "organizationPlaceholder": "Entrez le nom de votre organisation",
+    "loading": "Chargement...",
+    "needAccount": "Besoin d'un compte ? Inscrivez-vous",
+    "haveAccount": "Déjà un compte ? Connectez-vous",
+    "signInSuccess": "Connexion réussie",
+    "signOutSuccess": "Déconnexion réussie",
+    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte",
+    "emailVerificationNote": "Vous devrez vérifier votre email avant de vous connecter",
+    "passwordRequirements": "Le mot de passe ne répond pas aux exigences"
+  },
+  "password": {
+    "minLength": "Au moins 8 caractères",
+    "upperCase": "Au moins une majuscule",
+    "lowerCase": "Au moins une minuscule",
+    "number": "Au moins un chiffre",
+    "special": "Au moins un caractère spécial"
   }
 }

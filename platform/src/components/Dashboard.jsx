@@ -15,7 +15,7 @@ import {
   FiUserCheck,
   FiUser,
   FiUserPlus,
-  FiCalendarPlus
+  FiPlus
 } from 'react-icons/fi';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -27,7 +27,7 @@ import MembersPanel from './members/MembersPanel';
 import PaymentsPanel from './payments/PaymentsPanel';
 import AttendancePanel from './attendance/AttendancePanel';
 
-function Dashboard() {
+export default function Dashboard() {
   const { user, signOut } = useAuth();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ function Dashboard() {
 
   const quickActions = [
     { id: 'addMember', icon: FiUserPlus, label: t('dashboard.quickActions.addMember') },
-    { id: 'createClass', icon: FiCalendarPlus, label: t('dashboard.quickActions.createClass') },
+    { id: 'createClass', icon: FiPlus, label: t('dashboard.quickActions.createClass') },
     { id: 'recordPayment', icon: FiDollarSign, label: t('dashboard.quickActions.recordPayment') },
     { id: 'sendAnnouncement', icon: FiBell, label: t('dashboard.quickActions.sendAnnouncement') }
   ];
@@ -248,5 +248,3 @@ function Dashboard() {
     </div>
   );
 }
-
-export default Dashboard;

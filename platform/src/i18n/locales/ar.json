@@ -8,59 +8,53 @@
     "signOut": "تسجيل الخروج",
     "dashboard": "لوحة التحكم"
   },
-  "dashboard": {
-    "overview": "نظرة عامة",
-    "members": "الأعضاء",
-    "attendance": "الحضور",
-    "schedule": "الجدول",
-    "payments": "المدفوعات",
-    "analytics": "التحليلات",
-    "settings": "الإعدادات",
-    "welcomeMessage": "مرحباً بك في لوحة تحكم SmartSalle",
-    "organizationInfo": "إدارة: {organization}",
-    "graphs": {
-      "membershipTrend": "اتجاه العضوية",
-      "totalMembers": "إجمالي الأعضاء",
-      "newMembers": "الأعضاء الجدد",
-      "revenueChart": "مخطط الإيرادات",
-      "attendanceChart": "مخطط الحضور"
+  "hero": {
+    "title1": "أدر صالتك الرياضية",
+    "title2": "كما لم يحدث من قبل"
+  },
+  "features": {
+    "title": "كل ما تحتاجه",
+    "subtitle": "أدوات قوية لإدارة نشاطك الرياضي",
+    "memberManagement": {
+      "title": "إدارة الأعضاء",
+      "description": "تتبع العضويات والمدفوعات والحضور بسهولة"
     },
-    "stats": {
-      "activeMembers": "الأعضاء النشطين",
-      "monthlyRevenue": "الإيرادات الشهرية",
-      "classAttendance": "حضور الحصص",
-      "upcomingClasses": "الحصص القادمة",
-      "totalRevenue": "إجمالي الإيرادات",
-      "newMemberships": "العضويات الجديدة",
-      "activeClasses": "الحصص النشطة"
+    "classScheduling": {
+      "title": "جدولة الحصص",
+      "description": "نظم الحصص وأدر الحجوزات بكفاءة"
     },
-    "activity": {
-      "title": "النشاط الأخير",
-      "newMember": "انضم عضو جديد",
-      "classBooked": "تم حجز حصة",
-      "paymentReceived": "تم استلام الدفع",
-      "membershipRenewed": "تم تجديد العضوية",
-      "classCompleted": "تم إكمال الحصة",
-      "timeAgo": "منذ {time}"
+    "paymentProcessing": {
+      "title": "معالجة المدفوعات",
+      "description": "تعامل مع المدفوعات والاشتراكات بسلاسة"
     },
-    "quickActions": {
-      "title": "إجراءات سريعة",
-      "addMember": "إضافة عضو",
-      "createClass": "إنشاء حصة",
-      "recordPayment": "تسجيل دفع",
-      "sendAnnouncement": "إرسال إعلان"
-    },
-    "notifications": {
-      "title": "الإشعارات",
-      "markAllRead": "تحديد الكل كمقروء",
-      "viewAll": "عرض كل الإشعارات",
-      "noNotifications": "لا توجد إشعارات جديدة"
-    },
-    "profile": {
-      "viewProfile": "عرض الملف الشخصي",
-      "editProfile": "تعديل الملف الشخصي",
-      "settings": "الإعدادات",
-      "help": "المساعدة والدعم"
+    "analytics": {
+      "title": "التحليلات والتقارير",
+      "description": "اتخذ قرارات مدروسة بناءً على رؤى مفصلة"
     }
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "organization": "اسم المؤسسة",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "organizationPlaceholder": "أدخل اسم مؤسستك",
+    "loading": "جاري التحميل...",
+    "needAccount": "تحتاج حساب؟ سجل الآن",
+    "haveAccount": "لديك حساب بالفعل؟ سجل دخول",
+    "signInSuccess": "تم تسجيل الدخول بنجاح",
+    "signOutSuccess": "تم تسجيل الخروج بنجاح",
+    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك",
+    "emailVerificationNote": "ستحتاج إلى التحقق من بريدك الإلكتروني قبل تسجيل الدخول",
+    "passwordRequirements": "كلمة المرور لا تلبي المتطلبات"
+  },
+  "password": {
+    "minLength": "٨ أحرف على الأقل",
+    "upperCase": "حرف كبير واحد على الأقل",
+    "lowerCase": "حرف صغير واحد على الأقل",
+    "number": "رقم واحد على الأقل",
+    "special": "رمز خاص واحد على الأقل"
   }
 }

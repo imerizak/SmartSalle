@@ -8,29 +8,10 @@
     "signOut": "تسجيل الخروج",
     "dashboard": "لوحة التحكم"
   },
-  "auth": {
-    "signIn": "تسجيل الدخول",
-    "signUp": "إنشاء حساب",
-    "email": "البريد الإلكتروني",
-    "password": "كلمة المرور",
-    "fullName": "الاسم الكامل",
-    "fullNamePlaceholder": "أدخل اسمك الكامل",
-    "organization": "اسم المنظمة",
-    "organizationPlaceholder": "أدخل اسم صالتك الرياضية",
-    "loading": "جاري التحميل...",
-    "needAccount": "ليس لديك حساب؟ سجل الآن",
-    "haveAccount": "لديك حساب بالفعل؟ سجل دخولك",
-    "signInSuccess": "تم تسجيل الدخول بنجاح!",
-    "signUpSuccess": "تم إنشاء الحساب بنجاح!",
-    "signOutSuccess": "تم تسجيل الخروج بنجاح!",
-    "passwordRequirements": "كلمة المرور لا تلبي متطلبات الأمان",
-    "emailVerificationNote": "بعد التسجيل، ستحتاج إلى تأكيد بريدك الإلكتروني",
-    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك",
-    "emailVerified": "تم التحقق من البريد الإلكتروني بنجاح!"
-  },
   "dashboard": {
     "overview": "نظرة عامة",
     "members": "الأعضاء",
+    "attendance": "الحضور",
     "schedule": "الجدول",
     "payments": "المدفوعات",
     "analytics": "التحليلات",
@@ -40,109 +21,46 @@
     "graphs": {
       "membershipTrend": "اتجاه العضوية",
       "totalMembers": "إجمالي الأعضاء",
-      "newMembers": "الأعضاء الجدد"
+      "newMembers": "الأعضاء الجدد",
+      "revenueChart": "مخطط الإيرادات",
+      "attendanceChart": "مخطط الحضور"
     },
     "stats": {
       "activeMembers": "الأعضاء النشطين",
       "monthlyRevenue": "الإيرادات الشهرية",
       "classAttendance": "حضور الحصص",
-      "upcomingClasses": "الحصص القادمة"
+      "upcomingClasses": "الحصص القادمة",
+      "totalRevenue": "إجمالي الإيرادات",
+      "newMemberships": "العضويات الجديدة",
+      "activeClasses": "الحصص النشطة"
     },
     "activity": {
+      "title": "النشاط الأخير",
       "newMember": "انضم عضو جديد",
       "classBooked": "تم حجز حصة",
-      "paymentReceived": "تم استلام الدفع"
+      "paymentReceived": "تم استلام الدفع",
+      "membershipRenewed": "تم تجديد العضوية",
+      "classCompleted": "تم إكمال الحصة",
+      "timeAgo": "منذ {time}"
     },
-    "recentActivity": "النشاط الأخير"
-  },
-  "members": {
-    "title": "إدارة الأعضاء",
-    "addNew": "إضافة عضو جديد",
-    "search": "البحث عن الأعضاء...",
-    "add": "إضافة عضو",
-    "edit": "تعديل العضو",
-    "update": "تحديث",
-    "create": "إنشاء",
-    "addSuccess": "تمت إضافة العضو بنجاح",
-    "updateSuccess": "تم تحديث العضو بنجاح",
-    "deleteSuccess": "تم حذف العضو بنجاح",
-    "deleteConfirm": "هل أنت متأكد من حذف هذا العضو؟",
-    "table": {
-      "name": "الاسم",
-      "contact": "معلومات الاتصال",
-      "membership": "العضوية",
-      "status": "الحالة",
-      "joinDate": "تاريخ الانضمام",
-      "actions": "الإجراءات"
+    "quickActions": {
+      "title": "إجراءات سريعة",
+      "addMember": "إضافة عضو",
+      "createClass": "إنشاء حصة",
+      "recordPayment": "تسجيل دفع",
+      "sendAnnouncement": "إرسال إعلان"
     },
-    "form": {
-      "name": "الاسم الكامل",
-      "email": "البريد الإلكتروني",
-      "phone": "رقم الهاتف",
-      "membership": "نوع العضوية",
-      "status": "الحالة",
-      "joinDate": "تاريخ الانضمام"
+    "notifications": {
+      "title": "الإشعارات",
+      "markAllRead": "تحديد الكل كمقروء",
+      "viewAll": "عرض كل الإشعارات",
+      "noNotifications": "لا توجد إشعارات جديدة"
     },
-    "memberships": {
-      "basic": "أساسية",
-      "premium": "مميزة",
-      "vip": "VIP"
-    },
-    "status": {
-      "active": "نشط",
-      "inactive": "غير نشط"
+    "profile": {
+      "viewProfile": "عرض الملف الشخصي",
+      "editProfile": "تعديل الملف الشخصي",
+      "settings": "الإعدادات",
+      "help": "المساعدة والدعم"
     }
-  },
-  "payments": {
-    "title": "إدارة المدفوعات",
-    "subtitle": "متابعة وإدارة مدفوعات الأعضاء",
-    "search": "البحث عن المدفوعات...",
-    "all": "جميع المدفوعات",
-    "paid": "مدفوع",
-    "pending": "قيد الانتظار",
-    "totalAmount": "المبلغ الإجمالي",
-    "paidAmount": "المبلغ المدفوع",
-    "pendingAmount": "المبلغ المعلق",
-    "statusDistribution": "توزيع حالات الدفع",
-    "table": {
-      "member": "العضو",
-      "amount": "المبلغ",
-      "dueDate": "تاريخ الاستحقاق",
-      "status": "الحالة",
-      "membership": "العضوية",
-      "paidAt": "تم الدفع في",
-      "actions": "الإجراءات"
-    },
-    "status": {
-      "paid": "مدفوع",
-      "pending": "قيد الانتظار",
-      "overdue": "متأخر"
-    },
-    "actions": {
-      "markAsPaid": "تحديد كمدفوع",
-      "sendReminder": "إرسال تذكير",
-      "viewDetails": "عرض التفاصيل"
-    },
-    "messages": {
-      "reminderSent": "تم إرسال تذكير الدفع بنجاح",
-      "markedAsPaid": "تم تحديد الدفع كمدفوع بنجاح"
-    }
-  },
-  "common": {
-    "loading": "جاري التحميل...",
-    "error": "خطأ",
-    "success": "نجاح",
-    "save": "حفظ",
-    "cancel": "إلغاء",
-    "delete": "حذف",
-    "edit": "تعديل",
-    "update": "تحديث",
-    "create": "إنشاء",
-    "search": "بحث",
-    "filter": "تصفية",
-    "noResults": "لا توجد نتائج",
-    "actions": "إجراءات",
-    "confirm": "تأكيد",
-    "back": "رجوع"
   }
 }

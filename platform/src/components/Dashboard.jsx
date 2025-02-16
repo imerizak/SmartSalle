@@ -11,7 +11,11 @@ import {
   FiBell,
   FiHelpCircle,
   FiActivity,
-  FiClock
+  FiClock,
+  FiUserCheck,
+  FiUser,
+  FiUserPlus,
+  FiCalendarPlus
 } from 'react-icons/fi';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -21,8 +25,9 @@ import MembershipGraph from './dashboard/MembershipGraph';
 import StatsCard from './dashboard/StatsCard';
 import MembersPanel from './members/MembersPanel';
 import PaymentsPanel from './payments/PaymentsPanel';
+import AttendancePanel from './attendance/AttendancePanel';
 
-const Dashboard = () => {
+function Dashboard() {
   const { user, signOut } = useAuth();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -62,10 +67,24 @@ const Dashboard = () => {
   const menuItems = [
     { id: 'overview', icon: FiHome, label: t('dashboard.overview') },
     { id: 'members', icon: FiUsers, label: t('dashboard.members') },
+    { id: 'attendance', icon: FiUserCheck, label: t('dashboard.attendance') },
     { id: 'schedule', icon: FiCalendar, label: t('dashboard.schedule') },
     { id: 'payments', icon: FiDollarSign, label: t('dashboard.payments') },
     { id: 'analytics', icon: FiBarChart2, label: t('dashboard.analytics') },
     { id: 'settings', icon: FiSettings, label: t('dashboard.settings') }
+  ];
+
+  const profileMenu = [
+    { id: 'profile', icon: FiUser, label: t('dashboard.profile.viewProfile') },
+    { id: 'settings', icon: FiSettings, label: t('dashboard.profile.settings') },
+    { id: 'help', icon: FiHelpCircle, label: t('dashboard.profile.help') }
+  ];
+
+  const quickActions = [
+    { id: 'addMember', icon: FiUserPlus, label: t('dashboard.quickActions.addMember') },
+    { id: 'createClass', icon: FiCalendarPlus, label: t('dashboard.quickActions.createClass') },
+    { id: 'recordPayment', icon: FiDollarSign, label: t('dashboard.quickActions.recordPayment') },
+    { id: 'sendAnnouncement', icon: FiBell, label: t('dashboard.quickActions.sendAnnouncement') }
   ];
 
   useEffect(() => {
@@ -98,10 +117,11 @@ const Dashboard = () => {
         return <MembersPanel />;
       case 'payments':
         return <PaymentsPanel />;
+      case 'attendance':
+        return <AttendancePanel />;
       case 'overview':
         return (
           <>
-            {/* Welcome Section */}
             <div className="mb-8">
               <h1 className="text-2xl font-semibold text-gray-900">
                 {t('dashboard.welcomeMessage')}
@@ -113,7 +133,6 @@ const Dashboard = () => {
               </p>
             </div>
 
-            {/* Stats Grid */}
             <div className="grid grid-cols-1 gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => (
                 <StatsCard
@@ -127,15 +146,13 @@ const Dashboard = () => {
               ))}
             </div>
 
-            {/* Graphs Section */}
             <div className="grid grid-cols-1 gap-6 mb-8">
               <MembershipGraph />
             </div>
 
-            {/* Recent Activity */}
             <div className="bg-white rounded-lg shadow p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('dashboard.recentActivity')}
+                {t('dashboard.activity.title')}
               </h3>
               <div className="space-y-4">
                 {[1, 2, 3].map((_, index) => (
@@ -153,7 +170,9 @@ const Dashboard = () => {
                         </p>
                       </div>
                     </div>
-                    <span className="text-sm text-gray-500">2 min ago</span>
+                    <span className="text-sm text-gray-500">
+                      {t('dashboard.activity.timeAgo', { time: '2 min' })}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -167,7 +186,6 @@ const Dashboard = () => {
 
   return (
     <div className="flex h-screen bg-gray-100" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
-      {/* Sidebar */}
       <div className="w-64 bg-secondary text-white shadow-lg">
         <div className="p-4">
           <Logo />
@@ -203,7 +221,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 overflow-auto">
         <header className="bg-white shadow">
           <div className="max-w-7xl mx-auto py-4 px-4">
@@ -230,6 +247,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Dashboard;

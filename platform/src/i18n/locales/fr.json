@@ -8,29 +8,10 @@
     "signOut": "Se déconnecter",
     "dashboard": "Tableau de bord"
   },
-  "auth": {
-    "signIn": "Se connecter",
-    "signUp": "S'inscrire",
-    "email": "Adresse email",
-    "password": "Mot de passe",
-    "fullName": "Nom complet",
-    "fullNamePlaceholder": "Entrez votre nom complet",
-    "organization": "Nom de l'organisation",
-    "organizationPlaceholder": "Entrez le nom de votre salle de sport",
-    "loading": "Chargement...",
-    "needAccount": "Pas de compte ? Inscrivez-vous",
-    "haveAccount": "Déjà un compte ? Connectez-vous",
-    "signInSuccess": "Connexion réussie !",
-    "signUpSuccess": "Compte créé avec succès !",
-    "signOutSuccess": "Déconnexion réussie !",
-    "passwordRequirements": "Le mot de passe ne répond pas aux exigences de sécurité",
-    "emailVerificationNote": "Après l'inscription, vous devrez vérifier votre adresse email.",
-    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte",
-    "emailVerified": "Email vérifié avec succès !"
-  },
   "dashboard": {
     "overview": "Vue d'ensemble",
     "members": "Membres",
+    "attendance": "Présences",
     "schedule": "Planning",
     "payments": "Paiements",
     "analytics": "Analyses",
@@ -38,111 +19,48 @@
     "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
     "organizationInfo": "Gestion de : {organization}",
     "graphs": {
-      "membershipTrend": "Évolution des adhésions",
+      "membershipTrend": "Tendance des adhésions",
       "totalMembers": "Total des membres",
-      "newMembers": "Nouveaux membres"
+      "newMembers": "Nouveaux membres",
+      "revenueChart": "Graphique des revenus",
+      "attendanceChart": "Graphique des présences"
     },
     "stats": {
       "activeMembers": "Membres actifs",
       "monthlyRevenue": "Revenu mensuel",
       "classAttendance": "Participation aux cours",
-      "upcomingClasses": "Cours à venir"
+      "upcomingClasses": "Cours à venir",
+      "totalRevenue": "Revenu total",
+      "newMemberships": "Nouvelles adhésions",
+      "activeClasses": "Cours actifs"
     },
     "activity": {
+      "title": "Activité récente",
       "newMember": "Nouveau membre inscrit",
       "classBooked": "Cours réservé",
-      "paymentReceived": "Paiement reçu"
+      "paymentReceived": "Paiement reçu",
+      "membershipRenewed": "Adhésion renouvelée",
+      "classCompleted": "Cours terminé",
+      "timeAgo": "il y a {time}"
     },
-    "recentActivity": "Activité récente"
-  },
-  "members": {
-    "title": "Gestion des membres",
-    "addNew": "Ajouter un membre",
-    "search": "Rechercher des membres...",
-    "add": "Ajouter un membre",
-    "edit": "Modifier le membre",
-    "update": "Mettre à jour",
-    "create": "Créer",
-    "addSuccess": "Membre ajouté avec succès",
-    "updateSuccess": "Membre mis à jour avec succès",
-    "deleteSuccess": "Membre supprimé avec succès",
-    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce membre ?",
-    "table": {
-      "name": "Nom",
-      "contact": "Coordonnées",
-      "membership": "Abonnement",
-      "status": "Statut",
-      "joinDate": "Date d'inscription",
-      "actions": "Actions"
+    "quickActions": {
+      "title": "Actions rapides",
+      "addMember": "Ajouter un membre",
+      "createClass": "Créer un cours",
+      "recordPayment": "Enregistrer un paiement",
+      "sendAnnouncement": "Envoyer une annonce"
     },
-    "form": {
-      "name": "Nom complet",
-      "email": "Adresse email",
-      "phone": "Numéro de téléphone",
-      "membership": "Type d'abonnement",
-      "status": "Statut",
-      "joinDate": "Date d'inscription"
+    "notifications": {
+      "title": "Notifications",
+      "markAllRead": "Tout marquer comme lu",
+      "viewAll": "Voir toutes les notifications",
+      "noNotifications": "Aucune nouvelle notification"
     },
-    "memberships": {
-      "basic": "Basique",
-      "premium": "Premium",
-      "vip": "VIP"
-    },
-    "status": {
-      "active": "Actif",
-      "inactive": "Inactif"
+    "profile": {
+      "viewProfile": "Voir le profil",
+      "editProfile": "Modifier le profil",
+      "settings": "Paramètres",
+      "help": "Aide et support"
     }
-  },
-  "payments": {
-    "title": "Gestion des paiements",
-    "subtitle": "Suivre et gérer les paiements des membres",
-    "search": "Rechercher des paiements...",
-    "all": "Tous les paiements",
-    "paid": "Payé",
-    "pending": "En attente",
-    "totalAmount": "Montant total",
-    "paidAmount": "Montant payé",
-    "pendingAmount": "Montant en attente",
-    "statusDistribution": "Distribution des statuts de paiement",
-    "table": {
-      "member": "Membre",
-      "amount": "Montant",
-      "dueDate": "Date d'échéance",
-      "status": "Statut",
-      "membership": "Abonnement",
-      "paidAt": "Payé le",
-      "actions": "Actions"
-    },
-    "status": {
-      "paid": "Payé",
-      "pending": "En attente",
-      "overdue": "En retard"
-    },
-    "actions": {
-      "markAsPaid": "Marquer comme payé",
-      "sendReminder": "Envoyer un rappel",
-      "viewDetails": "Voir les détails"
-    },
-    "messages": {
-      "reminderSent": "Rappel de paiement envoyé avec succès",
-      "markedAsPaid": "Paiement marqué comme payé avec succès"
-    }
-  },
-  "common": {
-    "loading": "Chargement...",
-    "error": "Erreur",
-    "success": "Succès",
-    "save": "Enregistrer",
-    "cancel": "Annuler",
-    "delete": "Supprimer",
-    "edit": "Modifier",
-    "update": "Mettre à jour",
-    "create": "Créer",
-    "search": "Rechercher",
-    "filter": "Filtrer",
-    "noResults": "Aucun résultat trouvé",
-    "actions": "Actions",
-    "confirm": "Confirmer",
-    "back": "Retour"
   }
 }

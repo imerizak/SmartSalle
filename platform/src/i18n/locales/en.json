@@ -8,29 +8,10 @@
     "signOut": "Sign Out",
     "dashboard": "Dashboard"
   },
-  "auth": {
-    "signIn": "Sign In",
-    "signUp": "Sign Up",
-    "email": "Email Address",
-    "password": "Password",
-    "fullName": "Full Name",
-    "fullNamePlaceholder": "Enter your full name",
-    "organization": "Organization Name",
-    "organizationPlaceholder": "Enter your gym's name",
-    "loading": "Loading...",
-    "needAccount": "Don't have an account? Sign up",
-    "haveAccount": "Already have an account? Sign in",
-    "signInSuccess": "Successfully signed in!",
-    "signUpSuccess": "Account created successfully!",
-    "signOutSuccess": "Successfully signed out!",
-    "passwordRequirements": "Password doesn't meet the security requirements",
-    "emailVerificationNote": "After signing up, you'll need to verify your email address. Please check your inbox for the verification link.",
-    "verifyEmail": "Please check your email to verify your account",
-    "emailVerified": "Email verified successfully!"
-  },
   "dashboard": {
     "overview": "Overview",
     "members": "Members",
+    "attendance": "Attendance",
     "schedule": "Schedule",
     "payments": "Payments",
     "analytics": "Analytics",
@@ -40,109 +21,46 @@
     "graphs": {
       "membershipTrend": "Membership Trend",
       "totalMembers": "Total Members",
-      "newMembers": "New Members"
+      "newMembers": "New Members",
+      "revenueChart": "Revenue Chart",
+      "attendanceChart": "Attendance Chart"
     },
     "stats": {
       "activeMembers": "Active Members",
       "monthlyRevenue": "Monthly Revenue",
       "classAttendance": "Class Attendance",
-      "upcomingClasses": "Upcoming Classes"
+      "upcomingClasses": "Upcoming Classes",
+      "totalRevenue": "Total Revenue",
+      "newMemberships": "New Memberships",
+      "activeClasses": "Active Classes"
     },
     "activity": {
+      "title": "Recent Activity",
       "newMember": "New member joined",
       "classBooked": "Class booked",
-      "paymentReceived": "Payment received"
+      "paymentReceived": "Payment received",
+      "membershipRenewed": "Membership renewed",
+      "classCompleted": "Class completed",
+      "timeAgo": "{time} ago"
     },
-    "recentActivity": "Recent Activity"
-  },
-  "members": {
-    "title": "Members Management",
-    "addNew": "Add New Member",
-    "search": "Search members...",
-    "add": "Add Member",
-    "edit": "Edit Member",
-    "update": "Update Member",
-    "create": "Create Member",
-    "addSuccess": "Member added successfully",
-    "updateSuccess": "Member updated successfully",
-    "deleteSuccess": "Member deleted successfully",
-    "deleteConfirm": "Are you sure you want to delete this member?",
-    "table": {
-      "name": "Name",
-      "contact": "Contact Info",
-      "membership": "Membership",
-      "status": "Status",
-      "joinDate": "Join Date",
-      "actions": "Actions"
+    "quickActions": {
+      "title": "Quick Actions",
+      "addMember": "Add Member",
+      "createClass": "Create Class",
+      "recordPayment": "Record Payment",
+      "sendAnnouncement": "Send Announcement"
     },
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "membership": "Membership Type",
-      "status": "Status",
-      "joinDate": "Join Date"
+    "notifications": {
+      "title": "Notifications",
+      "markAllRead": "Mark all as read",
+      "viewAll": "View all notifications",
+      "noNotifications": "No new notifications"
     },
-    "memberships": {
-      "basic": "Basic",
-      "premium": "Premium",
-      "vip": "VIP"
-    },
-    "status": {
-      "active": "Active",
-      "inactive": "Inactive"
+    "profile": {
+      "viewProfile": "View Profile",
+      "editProfile": "Edit Profile",
+      "settings": "Settings",
+      "help": "Help & Support"
     }
-  },
-  "payments": {
-    "title": "Payments Management",
-    "subtitle": "Track and manage member payments",
-    "search": "Search payments...",
-    "all": "All Payments",
-    "paid": "Paid",
-    "pending": "Pending",
-    "totalAmount": "Total Amount",
-    "paidAmount": "Paid Amount",
-    "pendingAmount": "Pending Amount",
-    "statusDistribution": "Payment Status Distribution",
-    "table": {
-      "member": "Member",
-      "amount": "Amount",
-      "dueDate": "Due Date",
-      "status": "Status",
-      "membership": "Membership",
-      "paidAt": "Paid At",
-      "actions": "Actions"
-    },
-    "status": {
-      "paid": "Paid",
-      "pending": "Pending",
-      "overdue": "Overdue"
-    },
-    "actions": {
-      "markAsPaid": "Mark as Paid",
-      "sendReminder": "Send Reminder",
-      "viewDetails": "View Details"
-    },
-    "messages": {
-      "reminderSent": "Payment reminder sent successfully",
-      "markedAsPaid": "Payment marked as paid successfully"
-    }
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "save": "Save",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "edit": "Edit",
-    "update": "Update",
-    "create": "Create",
-    "search": "Search",
-    "filter": "Filter",
-    "noResults": "No results found",
-    "actions": "Actions",
-    "confirm": "Confirm",
-    "back": "Back"
   }
 }

@@ -24,7 +24,7 @@
     "signUpSuccess": "تم إنشاء الحساب بنجاح!",
     "signOutSuccess": "تم تسجيل الخروج بنجاح!",
     "passwordRequirements": "كلمة المرور لا تلبي متطلبات الأمان",
-    "emailVerificationNote": "بعد التسجيل، ستحتاج إلى تأكيد بريدك الإلكتروني. يرجى التحقق من صندوق الوارد للحصول على رابط التأكيد.",
+    "emailVerificationNote": "بعد التسجيل، ستحتاج إلى تأكيد بريدك الإلكتروني",
     "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك",
     "emailVerified": "تم التحقق من البريد الإلكتروني بنجاح!"
   },
@@ -37,65 +37,112 @@
     "settings": "الإعدادات",
     "welcomeMessage": "مرحباً بك في لوحة تحكم SmartSalle",
     "organizationInfo": "إدارة: {organization}",
-    "quickStats": "إحصائيات سريعة",
-    "recentActivity": "النشاط الأخير",
-    "upcomingClasses": "الحصص القادمة",
-    "activeMembers": "الأعضاء النشطين",
-    "monthlyRevenue": "الإيرادات الشهرية",
-    "profile": "الملف الشخصي",
-    "notifications": "الإشعارات",
-    "help": "المساعدة",
-    "memberStats": {
-      "total": "إجمالي الأعضاء",
-      "active": "الأعضاء النشطين",
-      "new": "الأعضاء الجدد",
-      "expired": "العضويات المنتهية"
+    "graphs": {
+      "membershipTrend": "اتجاه العضوية",
+      "totalMembers": "إجمالي الأعضاء",
+      "newMembers": "الأعضاء الجدد"
     },
-    "financialStats": {
-      "revenue": "الإيرادات",
-      "expenses": "المصروفات",
-      "profit": "الأرباح",
-      "pending": "المدفوعات المعلقة"
+    "stats": {
+      "activeMembers": "الأعضاء النشطين",
+      "monthlyRevenue": "الإيرادات الشهرية",
+      "classAttendance": "حضور الحصص",
+      "upcomingClasses": "الحصص القادمة"
     },
-    "classStats": {
-      "scheduled": "الحصص المجدولة",
-      "completed": "الحصص المكتملة",
-      "cancelled": "الحصص الملغاة",
-      "attendance": "نسبة الحضور"
+    "activity": {
+      "newMember": "انضم عضو جديد",
+      "classBooked": "تم حجز حصة",
+      "paymentReceived": "تم استلام الدفع"
+    },
+    "recentActivity": "النشاط الأخير"
+  },
+  "members": {
+    "title": "إدارة الأعضاء",
+    "addNew": "إضافة عضو جديد",
+    "search": "البحث عن الأعضاء...",
+    "add": "إضافة عضو",
+    "edit": "تعديل العضو",
+    "update": "تحديث",
+    "create": "إنشاء",
+    "addSuccess": "تمت إضافة العضو بنجاح",
+    "updateSuccess": "تم تحديث العضو بنجاح",
+    "deleteSuccess": "تم حذف العضو بنجاح",
+    "deleteConfirm": "هل أنت متأكد من حذف هذا العضو؟",
+    "table": {
+      "name": "الاسم",
+      "contact": "معلومات الاتصال",
+      "membership": "العضوية",
+      "status": "الحالة",
+      "joinDate": "تاريخ الانضمام",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "membership": "نوع العضوية",
+      "status": "الحالة",
+      "joinDate": "تاريخ الانضمام"
+    },
+    "memberships": {
+      "basic": "أساسية",
+      "premium": "مميزة",
+      "vip": "VIP"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
     }
   },
-  "password": {
-    "minLength": "٨ أحرف على الأقل",
-    "upperCase": "حرف كبير واحد على الأقل (A-Z)",
-    "lowerCase": "حرف صغير واحد على الأقل (a-z)",
-    "number": "رقم واحد على الأقل (0-9)",
-    "special": "رمز خاص واحد على الأقل (!@#$%^&*)"
-  },
-  "hero": {
-    "title1": "أدر صالتك الرياضية",
-    "title2": "بذكاء، لا بجهد",
-    "description": "منصة متكاملة لإدارة الصالات الرياضية الحديثة. تبسيط العمليات، تعزيز مشاركة الأعضاء، وتنمية عملك.",
-    "startTrial": "ابدأ تجربة مجانية",
-    "bookDemo": "احجز عرضاً توضيحياً"
-  },
-  "features": {
-    "title": "كل ما تحتاجه لإدارة صالتك الرياضية",
-    "subtitle": "ميزات قوية مصممة لجعل إدارة الصالة الرياضية سهلة",
-    "memberManagement": {
-      "title": "إدارة الأعضاء",
-      "description": "تتبع العضويات والحضور وتقدم الأعضاء في مكان واحد."
+  "payments": {
+    "title": "إدارة المدفوعات",
+    "subtitle": "متابعة وإدارة مدفوعات الأعضاء",
+    "search": "البحث عن المدفوعات...",
+    "all": "جميع المدفوعات",
+    "paid": "مدفوع",
+    "pending": "قيد الانتظار",
+    "totalAmount": "المبلغ الإجمالي",
+    "paidAmount": "المبلغ المدفوع",
+    "pendingAmount": "المبلغ المعلق",
+    "statusDistribution": "توزيع حالات الدفع",
+    "table": {
+      "member": "العضو",
+      "amount": "المبلغ",
+      "dueDate": "تاريخ الاستحقاق",
+      "status": "الحالة",
+      "membership": "العضوية",
+      "paidAt": "تم الدفع في",
+      "actions": "الإجراءات"
     },
-    "classScheduling": {
-      "title": "جدولة الحصص",
-      "description": "تقويم سهل الاستخدام لإدارة الحصص والمواعيد."
+    "status": {
+      "paid": "مدفوع",
+      "pending": "قيد الانتظار",
+      "overdue": "متأخر"
     },
-    "paymentProcessing": {
-      "title": "معالجة المدفوعات",
-      "description": "نظام دفع آمن وفوترة تلقائية."
+    "actions": {
+      "markAsPaid": "تحديد كمدفوع",
+      "sendReminder": "إرسال تذكير",
+      "viewDetails": "عرض التفاصيل"
     },
-    "analytics": {
-      "title": "التحليلات والتقارير",
-      "description": "رؤى مفصلة عن أداء ونمو صالتك الرياضية."
+    "messages": {
+      "reminderSent": "تم إرسال تذكير الدفع بنجاح",
+      "markedAsPaid": "تم تحديد الدفع كمدفوع بنجاح"
     }
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "update": "تحديث",
+    "create": "إنشاء",
+    "search": "بحث",
+    "filter": "تصفية",
+    "noResults": "لا توجد نتائج",
+    "actions": "إجراءات",
+    "confirm": "تأكيد",
+    "back": "رجوع"
   }
 }

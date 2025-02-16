@@ -12,7 +12,7 @@ i18n
       fr: { translation: fr },
       ar: { translation: ar }
     },
-    lng: 'en', // default language
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
@@ -23,9 +23,12 @@ i18n
   });
 
 // Handle RTL for Arabic
-document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-i18n.on('languageChanged', (lng) => {
-  document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
-});
+const handleLanguageChange = (lng) => {
+  document.dir = lng === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lng;
+};
+
+i18n.on('languageChanged', handleLanguageChange);
+handleLanguageChange(i18n.language);
 
 export default i18n;

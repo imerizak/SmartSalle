@@ -24,7 +24,7 @@
     "signUpSuccess": "Compte créé avec succès !",
     "signOutSuccess": "Déconnexion réussie !",
     "passwordRequirements": "Le mot de passe ne répond pas aux exigences de sécurité",
-    "emailVerificationNote": "Après l'inscription, vous devrez vérifier votre adresse email. Veuillez vérifier votre boîte de réception pour le lien de vérification.",
+    "emailVerificationNote": "Après l'inscription, vous devrez vérifier votre adresse email.",
     "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte",
     "emailVerified": "Email vérifié avec succès !"
   },
@@ -37,65 +37,112 @@
     "settings": "Paramètres",
     "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
     "organizationInfo": "Gestion de : {organization}",
-    "quickStats": "Statistiques rapides",
-    "recentActivity": "Activité récente",
-    "upcomingClasses": "Cours à venir",
-    "activeMembers": "Membres actifs",
-    "monthlyRevenue": "Revenu mensuel",
-    "profile": "Profil",
-    "notifications": "Notifications",
-    "help": "Aide",
-    "memberStats": {
-      "total": "Total des membres",
-      "active": "Membres actifs",
-      "new": "Nouveaux membres",
-      "expired": "Adhésions expirées"
+    "graphs": {
+      "membershipTrend": "Évolution des adhésions",
+      "totalMembers": "Total des membres",
+      "newMembers": "Nouveaux membres"
     },
-    "financialStats": {
-      "revenue": "Revenus",
-      "expenses": "Dépenses",
-      "profit": "Bénéfice",
-      "pending": "Paiements en attente"
+    "stats": {
+      "activeMembers": "Membres actifs",
+      "monthlyRevenue": "Revenu mensuel",
+      "classAttendance": "Participation aux cours",
+      "upcomingClasses": "Cours à venir"
     },
-    "classStats": {
-      "scheduled": "Cours programmés",
-      "completed": "Cours terminés",
-      "cancelled": "Cours annulés",
-      "attendance": "Taux de participation"
+    "activity": {
+      "newMember": "Nouveau membre inscrit",
+      "classBooked": "Cours réservé",
+      "paymentReceived": "Paiement reçu"
+    },
+    "recentActivity": "Activité récente"
+  },
+  "members": {
+    "title": "Gestion des membres",
+    "addNew": "Ajouter un membre",
+    "search": "Rechercher des membres...",
+    "add": "Ajouter un membre",
+    "edit": "Modifier le membre",
+    "update": "Mettre à jour",
+    "create": "Créer",
+    "addSuccess": "Membre ajouté avec succès",
+    "updateSuccess": "Membre mis à jour avec succès",
+    "deleteSuccess": "Membre supprimé avec succès",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce membre ?",
+    "table": {
+      "name": "Nom",
+      "contact": "Coordonnées",
+      "membership": "Abonnement",
+      "status": "Statut",
+      "joinDate": "Date d'inscription",
+      "actions": "Actions"
+    },
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "phone": "Numéro de téléphone",
+      "membership": "Type d'abonnement",
+      "status": "Statut",
+      "joinDate": "Date d'inscription"
+    },
+    "memberships": {
+      "basic": "Basique",
+      "premium": "Premium",
+      "vip": "VIP"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
     }
   },
-  "password": {
-    "minLength": "Au moins 8 caractères",
-    "upperCase": "Au moins une lettre majuscule (A-Z)",
-    "lowerCase": "Au moins une lettre minuscule (a-z)",
-    "number": "Au moins un chiffre (0-9)",
-    "special": "Au moins un caractère spécial (!@#$%^&*)"
-  },
-  "hero": {
-    "title1": "Gérez Votre Salle",
-    "title2": "Plus Intelligemment",
-    "description": "La plateforme tout-en-un pour la gestion moderne des salles de sport. Optimisez vos opérations, augmentez l'engagement des membres et développez votre entreprise.",
-    "startTrial": "Essai Gratuit",
-    "bookDemo": "Réserver une Démo"
-  },
-  "features": {
-    "title": "Tout ce dont vous avez besoin",
-    "subtitle": "Des fonctionnalités puissantes pour une gestion efficace",
-    "memberManagement": {
-      "title": "Gestion des Membres",
-      "description": "Suivez les adhésions, la fréquentation et les progrès des membres."
+  "payments": {
+    "title": "Gestion des paiements",
+    "subtitle": "Suivre et gérer les paiements des membres",
+    "search": "Rechercher des paiements...",
+    "all": "Tous les paiements",
+    "paid": "Payé",
+    "pending": "En attente",
+    "totalAmount": "Montant total",
+    "paidAmount": "Montant payé",
+    "pendingAmount": "Montant en attente",
+    "statusDistribution": "Distribution des statuts de paiement",
+    "table": {
+      "member": "Membre",
+      "amount": "Montant",
+      "dueDate": "Date d'échéance",
+      "status": "Statut",
+      "membership": "Abonnement",
+      "paidAt": "Payé le",
+      "actions": "Actions"
     },
-    "classScheduling": {
-      "title": "Planification des Cours",
-      "description": "Calendrier intuitif pour la gestion des cours et rendez-vous."
+    "status": {
+      "paid": "Payé",
+      "pending": "En attente",
+      "overdue": "En retard"
     },
-    "paymentProcessing": {
-      "title": "Gestion des Paiements",
-      "description": "Système de paiement sécurisé et facturation automatisée."
+    "actions": {
+      "markAsPaid": "Marquer comme payé",
+      "sendReminder": "Envoyer un rappel",
+      "viewDetails": "Voir les détails"
     },
-    "analytics": {
-      "title": "Analyses et Rapports",
-      "description": "Insights détaillés sur les performances de votre salle."
+    "messages": {
+      "reminderSent": "Rappel de paiement envoyé avec succès",
+      "markedAsPaid": "Paiement marqué comme payé avec succès"
     }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "update": "Mettre à jour",
+    "create": "Créer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "noResults": "Aucun résultat trouvé",
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "back": "Retour"
   }
 }

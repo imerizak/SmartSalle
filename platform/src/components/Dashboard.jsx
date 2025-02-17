@@ -1,5 +1,7 @@
+import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { 
   FiHome, 
   FiUsers, 
@@ -17,8 +19,6 @@ import {
   FiUserPlus,
   FiPlus
 } from 'react-icons/fi';
-import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import Logo from './Logo';
 import MembershipGraph from './dashboard/MembershipGraph';
@@ -26,16 +26,13 @@ import StatsCard from './dashboard/StatsCard';
 import MembersPanel from './members/MembersPanel';
 import PaymentsPanel from './payments/PaymentsPanel';
 import AttendancePanel from './attendance/AttendancePanel';
+import EventsPanel from './events/EventsPanel';
 
 export default function Dashboard() {
   const { user, signOut } = useAuth();
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
-  const [showLangMenu, setShowLangMenu] = useState(false);
-  const [showProfileMenu, setShowProfileMenu] = useState(false);
-  const langMenuRef = useRef(null);
-  const profileMenuRef = useRef(null);
 
   const stats = [
     {
@@ -68,38 +65,11 @@ export default function Dashboard() {
     { id: 'overview', icon: FiHome, label: t('dashboard.overview') },
     { id: 'members', icon: FiUsers, label: t('dashboard.members') },
     { id: 'attendance', icon: FiUserCheck, label: t('dashboard.attendance') },
-    { id: 'schedule', icon: FiCalendar, label: t('dashboard.schedule') },
+    { id: 'events', icon: FiCalendar, label: t('dashboard.events') },
     { id: 'payments', icon: FiDollarSign, label: t('dashboard.payments') },
     { id: 'analytics', icon: FiBarChart2, label: t('dashboard.analytics') },
     { id: 'settings', icon: FiSettings, label: t('dashboard.settings') }
   ];
-
-  const profileMenu = [
-    { id: 'profile', icon: FiUser, label: t('dashboard.profile.viewProfile') },
-    { id: 'settings', icon: FiSettings, label: t('dashboard.profile.settings') },
-    { id: 'help', icon: FiHelpCircle, label: t('dashboard.profile.help') }
-  ];
-
-  const quickActions = [
-    { id: 'addMember', icon: FiUserPlus, label: t('dashboard.quickActions.addMember') },
-    { id: 'createClass', icon: FiPlus, label: t('dashboard.quickActions.createClass') },
-    { id: 'recordPayment', icon: FiDollarSign, label: t('dashboard.quickActions.recordPayment') },
-    { id: 'sendAnnouncement', icon: FiBell, label: t('dashboard.quickActions.sendAnnouncement') }
-  ];
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
-        setShowLangMenu(false);
-      }
-      if (profileMenuRef.current && !profileMenuRef.current.contains(event.target)) {
-        setShowProfileMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   const handleSignOut = async () => {
     try {
@@ -119,6 +89,8 @@ export default function Dashboard() {
         return <PaymentsPanel />;
       case 'attendance':
         return <AttendancePanel />;
+      case 'events':
+        return <EventsPanel />;
       case 'overview':
         return (
           <>
@@ -186,52 +158,57 @@ export default function Dashboard() {
 
   return (
     <div className="flex h-screen bg-gray-100" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="w-64 bg-secondary text-white shadow-lg">
+      {/* Sidebar */}
+      <div className="w-64 bg-secondary text-white shadow-lg relative">
         <div className="p-4">
           <Logo />
         </div>
         
+        {/* Navigation Menu */}
         <nav className="mt-8">
           <div className="px-4 space-y-2">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`flex items-center space-x-2 w-full px-4 py-2 rounded-lg transition-colors ${
+                className={`flex items-center w-full px-4 py-2 rounded-lg transition-colors ${
                   activeTab === item.id 
                     ? 'bg-primary text-secondary font-medium' 
                     : 'text-gray-300 hover:text-primary-light'
                 }`}
               >
-                <item.icon className="w-5 h-5" />
+                <item.icon className={`w-5 h-5 ${i18n.language === 'ar' ? 'ml-2' : 'mr-2'}`} />
                 <span>{item.label}</span>
               </button>
             ))}
           </div>
         </nav>
 
-        <div className="absolute bottom-0 left-0 w-64 p-4 border-t border-secondary-light">
+        {/* Logout Button */}
+        <div className={`absolute bottom-0 w-full p-4 border-t border-secondary-light`}>
           <button
             onClick={handleSignOut}
-            className="flex items-center space-x-2 w-full px-4 py-2 text-red-400 hover:text-red-300 rounded-lg transition-colors"
+            className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 rounded-lg transition-colors"
           >
-            <FiLogOut className="w-5 h-5" />
+            <FiLogOut className={`w-5 h-5 ${i18n.language === 'ar' ? 'ml-2' : 'mr-2'}`} />
             <span>{t('nav.signOut')}</span>
           </button>
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="flex-1 overflow-auto">
+        {/* Header */}
         <header className="bg-white shadow">
           <div className="max-w-7xl mx-auto py-4 px-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-secondary">
                 {menuItems.find(item => item.id === activeTab)?.label}
               </h2>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center gap-4">
                 <button className="p-2 text-gray-600 hover:text-gray-900 relative">
                   <FiBell className="w-6 h-6" />
-                  <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                  <span className={`absolute top-1 ${i18n.language === 'ar' ? 'left-1' : 'right-1'} w-2 h-2 bg-red-500 rounded-full`}></span>
                 </button>
                 <span className="text-gray-600">
                   {user?.user_metadata?.full_name || user?.email}
@@ -241,6 +218,7 @@ export default function Dashboard() {
           </div>
         </header>
 
+        {/* Main Content Area */}
         <main className="max-w-7xl mx-auto py-6 px-4">
           {renderContent()}
         </main>

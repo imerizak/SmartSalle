@@ -46,15 +46,65 @@
     "haveAccount": "Déjà un compte ? Connectez-vous",
     "signInSuccess": "Connexion réussie",
     "signOutSuccess": "Déconnexion réussie",
-    "verifyEmail": "Veuillez vérifier votre email pour confirmer votre compte",
-    "emailVerificationNote": "Vous devrez vérifier votre email avant de vous connecter",
+    "verifyEmail": "Veuillez vérifier votre email",
+    "emailVerificationNote": "Vous devez vérifier votre email avant de vous connecter",
     "passwordRequirements": "Le mot de passe ne répond pas aux exigences"
   },
-  "password": {
-    "minLength": "Au moins 8 caractères",
-    "upperCase": "Au moins une majuscule",
-    "lowerCase": "Au moins une minuscule",
-    "number": "Au moins un chiffre",
-    "special": "Au moins un caractère spécial"
+  "dashboard": {
+    "overview": "Vue d'ensemble",
+    "members": "Membres",
+    "attendance": "Présence",
+    "schedule": "Planning",
+    "payments": "Paiements",
+    "analytics": "Analyses",
+    "settings": "Paramètres",
+    "events": "Événements",
+    "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
+    "organizationInfo": "Gestion de : {organization}"
+  },
+  "events": {
+    "title": "Gestion des Événements",
+    "subtitle": "Gérez les événements et activités de la salle",
+    "addNew": "Ajouter un Événement",
+    "search": "Rechercher des événements...",
+    "add": "Ajouter un Événement",
+    "edit": "Modifier l'Événement",
+    "update": "Mettre à jour l'Événement",
+    "create": "Créer l'Événement",
+    "addSuccess": "Événement ajouté avec succès",
+    "updateSuccess": "Événement mis à jour avec succès",
+    "deleteSuccess": "Événement supprimé avec succès",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cet événement ?",
+    "registered": "inscrits",
+    "form": {
+      "title": "Titre",
+      "description": "Description",
+      "date": "Date et Heure",
+      "duration": "Durée (minutes)",
+      "capacity": "Capacité",
+      "location": "Lieu",
+      "instructor": "Instructeur",
+      "type": "Type d'événement",
+      "status": "Statut"
+    },
+    "types": {
+      "class": "Cours",
+      "workshop": "Atelier",
+      "competition": "Compétition",
+      "seminar": "Séminaire"
+    },
+    "status": {
+      "all": "Tous",
+      "upcoming": "À venir",
+      "ongoing": "En cours",
+      "completed": "Terminé"
+    },
+    "notifications": {
+      "newEvent": "Nouvel Événement Ajouté",
+      "eventUpdated": "Événement Mis à Jour",
+      "eventCancelled": "Événement Annulé",
+      "reminderTitle": "Rappel d'Événement",
+      "reminderBody": "Votre événement commence dans {time}"
+    }
   }
 }

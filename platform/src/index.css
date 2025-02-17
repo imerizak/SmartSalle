@@ -16,25 +16,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.logo-text {
-  @apply font-extrabold tracking-wider;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text {
-  @apply font-bold;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* RTL Support */
-[dir="rtl"] .flex-row {
-  flex-direction: row-reverse;
-}
-
 [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;
 }
@@ -47,22 +29,51 @@ body {
   --tw-space-x-reverse: 1;
 }
 
-/* RTL specific margins */
-[dir="rtl"] .ml-3 {
-  margin-left: 0;
-  margin-right: 0.75rem;
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
 }
 
-[dir="rtl"] .mr-3 {
+/* RTL Margins */
+[dir="rtl"] .mr-2 {
   margin-right: 0;
-  margin-left: 0.75rem;
+  margin-left: 0.5rem;
 }
 
-/* RTL text alignment */
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .right-1 {
+  right: auto;
+  left: 0.25rem;
+}
+
+[dir="rtl"] .left-1 {
+  left: auto;
+  right: 0.25rem;
+}
+
+/* RTL Text Alignment */
 [dir="rtl"] .text-left {
   text-align: right;
 }
 
 [dir="rtl"] .text-right {
   text-align: left;
+}
+
+/* Logo and Gradient Text */
+.logo-text {
+  @apply font-extrabold tracking-wider;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  @apply font-bold;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

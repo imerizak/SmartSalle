@@ -27,7 +27,7 @@ function LandingPage() {
   );
 }
 
-function App() {
+export default function App() {
   return (
     <Router>
       <AuthProvider>
@@ -54,5 +54,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

@@ -32,29 +32,61 @@
       "description": "اتخذ قرارات مدروسة بناءً على رؤى مفصلة"
     }
   },
-  "auth": {
-    "signIn": "تسجيل الدخول",
-    "signUp": "إنشاء حساب",
-    "email": "البريد الإلكتروني",
-    "password": "كلمة المرور",
-    "fullName": "الاسم الكامل",
-    "organization": "اسم المؤسسة",
-    "fullNamePlaceholder": "أدخل اسمك الكامل",
-    "organizationPlaceholder": "أدخل اسم مؤسستك",
-    "loading": "جاري التحميل...",
-    "needAccount": "تحتاج حساب؟ سجل الآن",
-    "haveAccount": "لديك حساب بالفعل؟ سجل دخول",
-    "signInSuccess": "تم تسجيل الدخول بنجاح",
-    "signOutSuccess": "تم تسجيل الخروج بنجاح",
-    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك",
-    "emailVerificationNote": "ستحتاج إلى التحقق من بريدك الإلكتروني قبل تسجيل الدخول",
-    "passwordRequirements": "كلمة المرور لا تلبي المتطلبات"
+  "dashboard": {
+    "overview": "نظرة عامة",
+    "members": "الأعضاء",
+    "attendance": "الحضور",
+    "schedule": "الجدول",
+    "payments": "المدفوعات",
+    "analytics": "التحليلات",
+    "settings": "الإعدادات",
+    "events": "الفعاليات",
+    "welcomeMessage": "مرحباً بك في لوحة تحكم سمارت صالة",
+    "organizationInfo": "إدارة: {organization}"
   },
-  "password": {
-    "minLength": "٨ أحرف على الأقل",
-    "upperCase": "حرف كبير واحد على الأقل",
-    "lowerCase": "حرف صغير واحد على الأقل",
-    "number": "رقم واحد على الأقل",
-    "special": "رمز خاص واحد على الأقل"
+  "events": {
+    "title": "إدارة الفعاليات",
+    "subtitle": "إدارة فعاليات وأنشطة الصالة الرياضية",
+    "addNew": "إضافة فعالية جديدة",
+    "search": "البحث عن فعاليات...",
+    "add": "إضافة فعالية",
+    "edit": "تعديل الفعالية",
+    "update": "تحديث الفعالية",
+    "create": "إنشاء فعالية",
+    "addSuccess": "تمت إضافة الفعالية بنجاح",
+    "updateSuccess": "تم تحديث الفعالية بنجاح",
+    "deleteSuccess": "تم حذف الفعالية بنجاح",
+    "deleteConfirm": "هل أنت متأكد من حذف هذه الفعالية؟",
+    "registered": "مسجل",
+    "form": {
+      "title": "العنوان",
+      "description": "الوصف",
+      "date": "التاريخ والوقت",
+      "duration": "المدة (دقائق)",
+      "capacity": "السعة",
+      "location": "الموقع",
+      "instructor": "المدرب",
+      "type": "نوع الفعالية",
+      "status": "الحالة"
+    },
+    "types": {
+      "class": "حصة",
+      "workshop": "ورشة عمل",
+      "competition": "مسابقة",
+      "seminar": "ندوة"
+    },
+    "status": {
+      "all": "الكل",
+      "upcoming": "قادم",
+      "ongoing": "جاري",
+      "completed": "مكتمل"
+    },
+    "notifications": {
+      "newEvent": "تمت إضافة فعالية جديدة",
+      "eventUpdated": "تم تحديث الفعالية",
+      "eventCancelled": "تم إلغاء الفعالية",
+      "reminderTitle": "تذكير بالفعالية",
+      "reminderBody": "تبدأ فعاليتك خلال {time}"
+    }
   }
 }

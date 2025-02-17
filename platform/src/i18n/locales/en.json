@@ -48,7 +48,23 @@
     "signOutSuccess": "Signed out successfully",
     "verifyEmail": "Please check your email to verify your account",
     "emailVerificationNote": "You'll need to verify your email before signing in",
-    "passwordRequirements": "Password does not meet requirements"
+    "passwordRequirements": "Password does not meet requirements",
+    "errors": {
+      "invalidEmail": "Invalid email address format",
+      "userDisabled": "This account has been disabled",
+      "userNotFound": "No account found with this email",
+      "wrongPassword": "Incorrect password",
+      "emailInUse": "An account already exists with this email",
+      "weakPassword": "Password is too weak. Please follow the requirements",
+      "invalidCredentials": "Invalid email or password",
+      "networkError": "Network connection error. Please check your internet connection",
+      "tooManyRequests": "Too many attempts. Please try again later",
+      "serverError": "Server error. Please try again later",
+      "unknownError": "An unexpected error occurred. Please try again",
+      "emailNotVerified": "Please verify your email before signing in",
+      "sessionExpired": "Your session has expired. Please sign in again",
+      "missingFields": "Please fill in all required fields"
+    }
   },
   "password": {
     "minLength": "At least 8 characters",
@@ -65,45 +81,53 @@
     "payments": "Payments",
     "analytics": "Analytics",
     "settings": "Settings",
+    "events": "Events",
     "welcomeMessage": "Welcome to your SmartSalle Dashboard",
-    "organizationInfo": "Managing: {organization}",
-    "graphs": {
-      "membershipTrend": "Membership Trend",
-      "totalMembers": "Total Members",
-      "newMembers": "New Members",
-      "revenueChart": "Revenue Chart",
-      "attendanceChart": "Attendance Chart"
+    "organizationInfo": "Managing: {organization}"
+  },
+  "events": {
+    "title": "Event Management",
+    "subtitle": "Manage gym events and activities",
+    "addNew": "Add New Event",
+    "search": "Search events...",
+    "add": "Add Event",
+    "edit": "Edit Event",
+    "update": "Update Event",
+    "create": "Create Event",
+    "addSuccess": "Event added successfully",
+    "updateSuccess": "Event updated successfully",
+    "deleteSuccess": "Event deleted successfully",
+    "deleteConfirm": "Are you sure you want to delete this event?",
+    "registered": "registered",
+    "form": {
+      "title": "Title",
+      "description": "Description",
+      "date": "Date & Time",
+      "duration": "Duration (minutes)",
+      "capacity": "Capacity",
+      "location": "Location",
+      "instructor": "Instructor",
+      "type": "Event Type",
+      "status": "Status"
     },
-    "stats": {
-      "activeMembers": "Active Members",
-      "monthlyRevenue": "Monthly Revenue",
-      "classAttendance": "Class Attendance",
-      "upcomingClasses": "Upcoming Classes",
-      "totalRevenue": "Total Revenue",
-      "newMemberships": "New Memberships",
-      "activeClasses": "Active Classes"
+    "types": {
+      "class": "Class",
+      "workshop": "Workshop",
+      "competition": "Competition",
+      "seminar": "Seminar"
     },
-    "activity": {
-      "title": "Recent Activity",
-      "newMember": "New member joined",
-      "classBooked": "Class booked",
-      "paymentReceived": "Payment received",
-      "membershipRenewed": "Membership renewed",
-      "classCompleted": "Class completed",
-      "timeAgo": "{time} ago"
+    "status": {
+      "all": "All",
+      "upcoming": "Upcoming",
+      "ongoing": "Ongoing",
+      "completed": "Completed"
     },
-    "quickActions": {
-      "title": "Quick Actions",
-      "addMember": "Add Member",
-      "createClass": "Create Class",
-      "recordPayment": "Record Payment",
-      "sendAnnouncement": "Send Announcement"
-    },
-    "profile": {
-      "viewProfile": "View Profile",
-      "editProfile": "Edit Profile",
-      "settings": "Settings",
-      "help": "Help & Support"
+    "notifications": {
+      "newEvent": "New Event Added",
+      "eventUpdated": "Event Updated",
+      "eventCancelled": "Event Cancelled",
+      "reminderTitle": "Event Reminder",
+      "reminderBody": "Your event starts in {time}"
     }
   },
   "members": {

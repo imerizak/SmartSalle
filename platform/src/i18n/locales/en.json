@@ -73,9 +73,64 @@
     "number": "At least one number",
     "special": "At least one special character"
   },
+  "coaches": {
+    "title": "Coaches",
+    "subtitle": "Manage your fitness coaches and trainers",
+    "addNew": "Add New Coach",
+    "search": "Search coaches...",
+    "add": "Add Coach",
+    "edit": "Edit Coach",
+    "update": "Update Coach",
+    "create": "Create Coach",
+    "addSuccess": "Coach added successfully",
+    "updateSuccess": "Coach updated successfully",
+    "deleteSuccess": "Coach deleted successfully",
+    "deleteConfirm": "Are you sure you want to delete this coach?",
+    "allSpecialties": "All Specialties",
+    "specialties": "Specialties",
+    "certifications": "Certifications",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "experience": "Years of Experience",
+      "specialties": "Specialties",
+      "addSpecialty": "Add a specialty",
+      "certifications": "Certifications",
+      "addCertification": "Add a certification",
+      "availability": "Availability",
+      "bio": "Bio",
+      "status": "Status"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    }
+  },
+  "common": {
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "backToDashboard": "Back to Dashboard"
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "viewProfile": "View Profile",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "organization": "Organization",
+    "edit": "Edit Profile",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "Failed to update profile",
+    "changePhoto": "Change Photo",
+    "uploadPhoto": "Upload Photo"
+  },
   "dashboard": {
     "overview": "Overview",
     "members": "Members",
+    "coaches": "Coaches",
     "attendance": "Attendance",
     "schedule": "Schedule",
     "payments": "Payments",

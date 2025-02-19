@@ -2,10 +2,19 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import toast from 'react-hot-toast';
 
+// Create the context
 const AuthContext = createContext({});
 
-export const useAuth = () => useContext(AuthContext);
+// Create and export the hook
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
 
+// Export the provider component
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -30,10 +39,37 @@ export function AuthProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
+  const updateProfile = async ({ data }) => {
+    try {
+      const { error } = await supabase.auth.updateUser({
+        data: {
+          ...user?.user_metadata,
+          ...data
+        }
+      });
+
+      if (error) throw error;
+
+      // Update local user state
+      setUser({
+        ...user,
+        user_metadata: {
+          ...user?.user_metadata,
+          ...data
+        }
+      });
+
+      return { error: null };
+    } catch (error) {
+      return { error };
+    }
+  };
+
   const value = {
     signUp: (data) => supabase.auth.signUp(data),
     signIn: (data) => supabase.auth.signInWithPassword(data),
     signOut: () => supabase.auth.signOut(),
+    updateProfile,
     user,
   };
 

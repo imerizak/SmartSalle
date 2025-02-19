@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Dashboard from './components/Dashboard';
+import ProfilePage from './components/profile/ProfilePage';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -27,6 +28,15 @@ function LandingPage() {
   );
 }
 
+function ProtectedLayout({ children }) {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
+}
+
 export default function App() {
   return (
     <Router>
@@ -41,10 +51,20 @@ export default function App() {
             } 
           />
           <Route 
-            path="/dashboard" 
+            path="/dashboard/*" 
             element={
               <PrivateRoute>
                 <Dashboard />
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <PrivateRoute>
+                <ProtectedLayout>
+                  <ProfilePage />
+                </ProtectedLayout>
               </PrivateRoute>
             } 
           />

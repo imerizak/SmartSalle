@@ -1,25 +1,18 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { 
   FiHome, 
   FiUsers, 
   FiCalendar, 
   FiDollarSign, 
-  FiBarChart2, 
-  FiSettings, 
+  FiSettings,
   FiLogOut,
   FiBell,
-  FiHelpCircle,
-  FiActivity,
-  FiClock,
-  FiUserCheck,
   FiUser,
-  FiUserPlus,
-  FiPlus
+  FiUserCheck
 } from 'react-icons/fi';
-import toast from 'react-hot-toast';
 import Logo from './Logo';
 import MembershipGraph from './dashboard/MembershipGraph';
 import StatsCard from './dashboard/StatsCard';
@@ -27,133 +20,36 @@ import MembersPanel from './members/MembersPanel';
 import PaymentsPanel from './payments/PaymentsPanel';
 import AttendancePanel from './attendance/AttendancePanel';
 import EventsPanel from './events/EventsPanel';
+import CoachesPanel from './coaches/CoachesPanel';
+import ProfileDropdown from './profile/ProfileDropdown';
+import Overview from './Overview';
 
 export default function Dashboard() {
-  const { user, signOut } = useAuth();
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('overview');
+  
+  // Get the current active tab from the URL path
+  const getCurrentTab = () => {
+    const path = location.pathname.split('/')[2] || 'overview';
+    return path;
+  };
 
-  const stats = [
-    {
-      title: t('dashboard.stats.activeMembers'),
-      value: '245',
-      icon: FiUsers,
-      trend: { direction: 'up', value: '+12.5%' }
-    },
-    {
-      title: t('dashboard.stats.monthlyRevenue'),
-      value: '$12.5k',
-      icon: FiDollarSign,
-      trend: { direction: 'up', value: '+8.2%' }
-    },
-    {
-      title: t('dashboard.stats.classAttendance'),
-      value: '85%',
-      icon: FiActivity,
-      trend: { direction: 'down', value: '-2.4%' }
-    },
-    {
-      title: t('dashboard.stats.upcomingClasses'),
-      value: '12',
-      icon: FiClock,
-      color: "warning"
-    }
-  ];
+  const [activeTab, setActiveTab] = useState(getCurrentTab());
 
   const menuItems = [
     { id: 'overview', icon: FiHome, label: t('dashboard.overview') },
     { id: 'members', icon: FiUsers, label: t('dashboard.members') },
+    { id: 'coaches', icon: FiUser, label: t('dashboard.coaches') },
     { id: 'attendance', icon: FiUserCheck, label: t('dashboard.attendance') },
     { id: 'events', icon: FiCalendar, label: t('dashboard.events') },
     { id: 'payments', icon: FiDollarSign, label: t('dashboard.payments') },
-    { id: 'analytics', icon: FiBarChart2, label: t('dashboard.analytics') },
     { id: 'settings', icon: FiSettings, label: t('dashboard.settings') }
   ];
 
-  const handleSignOut = async () => {
-    try {
-      await signOut();
-      navigate('/');
-      toast.success(t('auth.signOutSuccess'));
-    } catch (error) {
-      toast.error(error.message);
-    }
-  };
-
-  const renderContent = () => {
-    switch (activeTab) {
-      case 'members':
-        return <MembersPanel />;
-      case 'payments':
-        return <PaymentsPanel />;
-      case 'attendance':
-        return <AttendancePanel />;
-      case 'events':
-        return <EventsPanel />;
-      case 'overview':
-        return (
-          <>
-            <div className="mb-8">
-              <h1 className="text-2xl font-semibold text-gray-900">
-                {t('dashboard.welcomeMessage')}
-              </h1>
-              <p className="mt-1 text-sm text-gray-500">
-                {t('dashboard.organizationInfo', { 
-                  organization: user?.user_metadata?.organization 
-                })}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat, index) => (
-                <StatsCard
-                  key={index}
-                  title={stat.title}
-                  value={stat.value}
-                  icon={stat.icon}
-                  trend={stat.trend}
-                  color={stat.color}
-                />
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 gap-6 mb-8">
-              <MembershipGraph />
-            </div>
-
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {t('dashboard.activity.title')}
-              </h3>
-              <div className="space-y-4">
-                {[1, 2, 3].map((_, index) => (
-                  <div key={index} className="flex items-center justify-between py-3 border-b border-gray-200 last:border-0">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                        <FiUsers className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">
-                          {t('dashboard.activity.newMember')}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          John Doe
-                        </p>
-                      </div>
-                    </div>
-                    <span className="text-sm text-gray-500">
-                      {t('dashboard.activity.timeAgo', { time: '2 min' })}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </>
-        );
-      default:
-        return <div className="p-6">Content for {activeTab}</div>;
-    }
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    navigate(`/dashboard/${tabId}`);
   };
 
   return (
@@ -170,7 +66,7 @@ export default function Dashboard() {
             {menuItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => setActiveTab(item.id)}
+                onClick={() => handleTabChange(item.id)}
                 className={`flex items-center w-full px-4 py-2 rounded-lg transition-colors ${
                   activeTab === item.id 
                     ? 'bg-primary text-secondary font-medium' 
@@ -183,21 +79,10 @@ export default function Dashboard() {
             ))}
           </div>
         </nav>
-
-        {/* Logout Button */}
-        <div className={`absolute bottom-0 w-full p-4 border-t border-secondary-light`}>
-          <button
-            onClick={handleSignOut}
-            className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 rounded-lg transition-colors"
-          >
-            <FiLogOut className={`w-5 h-5 ${i18n.language === 'ar' ? 'ml-2' : 'mr-2'}`} />
-            <span>{t('nav.signOut')}</span>
-          </button>
-        </div>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow">
           <div className="max-w-7xl mx-auto py-4 px-4">
@@ -210,17 +95,24 @@ export default function Dashboard() {
                   <FiBell className="w-6 h-6" />
                   <span className={`absolute top-1 ${i18n.language === 'ar' ? 'left-1' : 'right-1'} w-2 h-2 bg-red-500 rounded-full`}></span>
                 </button>
-                <span className="text-gray-600">
-                  {user?.user_metadata?.full_name || user?.email}
-                </span>
+                <ProfileDropdown />
               </div>
             </div>
           </div>
         </header>
 
         {/* Main Content Area */}
-        <main className="max-w-7xl mx-auto py-6 px-4">
-          {renderContent()}
+        <main className="flex-1 overflow-auto bg-gray-50">
+          <Routes>
+            <Route path="/" element={<Overview />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/members" element={<MembersPanel />} />
+            <Route path="/coaches" element={<CoachesPanel />} />
+            <Route path="/attendance" element={<AttendancePanel />} />
+            <Route path="/events" element={<EventsPanel />} />
+            <Route path="/payments" element={<PaymentsPanel />} />
+            <Route path="/settings" element={<div className="p-6">Settings Content</div>} />
+          </Routes>
         </main>
       </div>
     </div>

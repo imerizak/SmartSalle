@@ -8,33 +8,48 @@
     "signOut": "تسجيل الخروج",
     "dashboard": "لوحة التحكم"
   },
-  "hero": {
-    "title1": "أدر صالتك الرياضية",
-    "title2": "كما لم يحدث من قبل"
-  },
-  "features": {
-    "title": "كل ما تحتاجه",
-    "subtitle": "أدوات قوية لإدارة نشاطك الرياضي",
-    "memberManagement": {
-      "title": "إدارة الأعضاء",
-      "description": "تتبع العضويات والمدفوعات والحضور بسهولة"
-    },
-    "classScheduling": {
-      "title": "جدولة الحصص",
-      "description": "نظم الحصص وأدر الحجوزات بكفاءة"
-    },
-    "paymentProcessing": {
-      "title": "معالجة المدفوعات",
-      "description": "تعامل مع المدفوعات والاشتراكات بسلاسة"
-    },
-    "analytics": {
-      "title": "التحليلات والتقارير",
-      "description": "اتخذ قرارات مدروسة بناءً على رؤى مفصلة"
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "organization": "اسم المؤسسة",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "organizationPlaceholder": "أدخل اسم مؤسستك",
+    "loading": "جاري التحميل...",
+    "needAccount": "تحتاج حساب؟ سجل الآن",
+    "haveAccount": "لديك حساب؟ سجل دخولك",
+    "signInSuccess": "تم تسجيل الدخول بنجاح",
+    "signOutSuccess": "تم تسجيل الخروج بنجاح",
+    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني",
+    "emailVerificationNote": "يجب التحقق من بريدك الإلكتروني قبل تسجيل الدخول",
+    "passwordRequirements": "كلمة المرور لا تلبي المتطلبات",
+    "errors": {
+      "invalidEmail": "صيغة البريد الإلكتروني غير صحيحة",
+      "userDisabled": "تم تعطيل هذا الحساب",
+      "userNotFound": "لم يتم العثور على حساب بهذا البريد الإلكتروني",
+      "wrongPassword": "كلمة المرور غير صحيحة",
+      "emailInUse": "البريد الإلكتروني مستخدم بالفعل",
+      "weakPassword": "كلمة المرور ضعيفة جداً",
+      "invalidCredentials": "بيانات الدخول غير صحيحة",
+      "networkError": "خطأ في الاتصال بالشبكة",
+      "tooManyRequests": "محاولات كثيرة جداً، يرجى المحاولة لاحقاً",
+      "serverError": "خطأ في الخادم",
+      "unknownError": "حدث خطأ غير متوقع"
     }
+  },
+  "password": {
+    "minLength": "٨ أحرف على الأقل",
+    "upperCase": "حرف كبير واحد على الأقل",
+    "lowerCase": "حرف صغير واحد على الأقل",
+    "number": "رقم واحد على الأقل",
+    "special": "رمز خاص واحد على الأقل"
   },
   "dashboard": {
     "overview": "نظرة عامة",
     "members": "الأعضاء",
+    "coaches": "المدربين",
     "attendance": "الحضور",
     "schedule": "الجدول",
     "payments": "المدفوعات",
@@ -42,51 +57,103 @@
     "settings": "الإعدادات",
     "events": "الفعاليات",
     "welcomeMessage": "مرحباً بك في لوحة تحكم سمارت صالة",
-    "organizationInfo": "إدارة: {organization}"
+    "organizationInfo": "إدارة: {organization}",
+    "stats": {
+      "activeMembers": "الأعضاء النشطين",
+      "monthlyRevenue": "الإيرادات الشهرية",
+      "classAttendance": "حضور الحصص",
+      "upcomingClasses": "الحصص القادمة"
+    }
   },
-  "events": {
-    "title": "إدارة الفعاليات",
-    "subtitle": "إدارة فعاليات وأنشطة الصالة الرياضية",
-    "addNew": "إضافة فعالية جديدة",
-    "search": "البحث عن فعاليات...",
-    "add": "إضافة فعالية",
-    "edit": "تعديل الفعالية",
-    "update": "تحديث الفعالية",
-    "create": "إنشاء فعالية",
-    "addSuccess": "تمت إضافة الفعالية بنجاح",
-    "updateSuccess": "تم تحديث الفعالية بنجاح",
-    "deleteSuccess": "تم حذف الفعالية بنجاح",
-    "deleteConfirm": "هل أنت متأكد من حذف هذه الفعالية؟",
-    "registered": "مسجل",
-    "form": {
-      "title": "العنوان",
-      "description": "الوصف",
-      "date": "التاريخ والوقت",
-      "duration": "المدة (دقائق)",
-      "capacity": "السعة",
-      "location": "الموقع",
-      "instructor": "المدرب",
-      "type": "نوع الفعالية",
-      "status": "الحالة"
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "إدارة إعدادات صالتك",
+    "messages": {
+      "saveSuccess": "تم حفظ الإعدادات بنجاح",
+      "saveError": "فشل حفظ الإعدادات"
     },
-    "types": {
-      "class": "حصة",
-      "workshop": "ورشة عمل",
-      "competition": "مسابقة",
-      "seminar": "ندوة"
+    "tabs": {
+      "general": "عام",
+      "notifications": "الإشعارات",
+      "security": "الأمان",
+      "billing": "الفواتير",
+      "team": "الفريق",
+      "privacy": "الخصوصية"
     },
-    "status": {
-      "all": "الكل",
-      "upcoming": "قادم",
-      "ongoing": "جاري",
-      "completed": "مكتمل"
+    "general": {
+      "title": "الإعدادات العامة",
+      "gymName": "اسم الصالة",
+      "language": "اللغة",
+      "timezone": "المنطقة الزمنية",
+      "dateFormat": "تنسيق التاريخ",
+      "timeFormat": "تنسيق الوقت"
     },
     "notifications": {
-      "newEvent": "تمت إضافة فعالية جديدة",
-      "eventUpdated": "تم تحديث الفعالية",
-      "eventCancelled": "تم إلغاء الفعالية",
-      "reminderTitle": "تذكير بالفعالية",
-      "reminderBody": "تبدأ فعاليتك خلال {time}"
+      "title": "إعدادات الإشعارات",
+      "browser": "إشعارات المتصفح",
+      "browserDescription": "استلام الإشعارات في المتصفح",
+      "browserPermissionDenied": "تم رفض إذن إشعارات المتصفح",
+      "email": "إشعارات البريد الإلكتروني",
+      "emailNewMembers": "تسجيل أعضاء جدد",
+      "emailPayments": "تحديثات المدفوعات",
+      "emailClassBookings": "حجوزات الحصص",
+      "emailSystemUpdates": "تحديثات النظام",
+      "push": "الإشعارات الفورية",
+      "pushCheckIns": "تسجيل دخول الأعضاء",
+      "pushLowAttendance": "تنبيهات الحضور المنخفض",
+      "pushMembershipExpiry": "تذكير انتهاء العضوية",
+      "pushDailyReport": "التقارير اليومية"
+    },
+    "security": {
+      "title": "إعدادات الأمان",
+      "currentPassword": "كلمة المرور الحالية",
+      "newPassword": "كلمة المرور الجديدة",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "updatePassword": "تحديث كلمة المرور",
+      "twoFactor": "المصادقة الثنائية",
+      "twoFactorDescription": "إضافة طبقة أمان إضافية لحسابك",
+      "enableTwoFactor": "تفعيل المصادقة الثنائية",
+      "activeSessions": "الجلسات النشطة"
+    },
+    "billing": {
+      "title": "إعدادات الفواتير",
+      "currentPlan": "الخطة الحالية",
+      "paymentMethod": "طريقة الدفع",
+      "updateCard": "تحديث البطاقة",
+      "history": "سجل الفواتير",
+      "plans": {
+        "basic": {
+          "name": "أساسي",
+          "feature1": "حتى 100 عضو",
+          "feature2": "تحليلات أساسية",
+          "feature3": "دعم بالبريد الإلكتروني"
+        },
+        "premium": {
+          "name": "بريميوم",
+          "feature1": "حتى 500 عضو",
+          "feature2": "تحليلات متقدمة",
+          "feature3": "دعم ذو أولوية"
+        },
+        "enterprise": {
+          "name": "مؤسسات",
+          "feature1": "أعضاء غير محدودين",
+          "feature2": "ميزات مخصصة",
+          "feature3": "دعم على مدار الساعة"
+        }
+      }
     }
+  },
+  "common": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "loading": "جاري التحميل...",
+    "success": "تم بنجاح",
+    "error": "خطأ",
+    "confirm": "تأكيد",
+    "back": "رجوع"
   }
 }

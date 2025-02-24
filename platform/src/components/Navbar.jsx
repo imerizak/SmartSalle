@@ -14,29 +14,43 @@ export default function Navbar() {
   const { t } = useTranslation();
   const { user } = useAuth();
   const location = useLocation();
-  const isDashboard = location.pathname.includes('/dashboard');
 
   // Don't show regular navbar on dashboard
-  if (isDashboard) return null;
+  if (location.pathname.includes('/dashboard')) {
+    return null;
+  }
+
+  const navItems = !user ? [
+    { href: "#features", label: t('nav.features') },
+    { href: "#pricing", label: t('nav.pricing') },
+    { href: "#contact", label: t('nav.contact') }
+  ] : [];
 
   return (
     <nav className="bg-secondary text-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
+          {/* Logo and Brand */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Logo size="normal" />
             </Link>
           </div>
-          
-          <div className="hidden md:flex items-center space-x-6">
-            {!user && (
-              <>
-                <a href="#features" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.features')}</a>
-                <a href="#pricing" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.pricing')}</a>
-                <a href="#contact" className="text-gray-300 hover:text-primary-light transition-colors">{t('nav.contact')}</a>
-              </>
-            )}
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex md:items-center md:space-x-6">
+            {/* Navigation Links */}
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-gray-300 hover:text-primary-light transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+
+            {/* Dashboard Link for logged-in users */}
             {user && (
               <Link 
                 to="/dashboard" 
@@ -45,7 +59,11 @@ export default function Navbar() {
                 {t('nav.dashboard')}
               </Link>
             )}
+
+            {/* Language Switcher */}
             <LanguageSwitcher />
+
+            {/* Auth Button or Profile */}
             {user ? (
               <ProfileDropdown />
             ) : (
@@ -58,41 +76,58 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="md:hidden flex items-center gap-4">
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
             <LanguageSwitcher />
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300">
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-secondary-light focus:outline-none"
+            >
+              {isOpen ? (
+                <FiX className="block h-6 w-6" />
+              ) : (
+                <FiMenu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-secondary-light">
-          <div className="px-4 pt-2 pb-3 space-y-3">
-            {!user && (
-              <>
-                <a href="#features" className="block text-gray-300 hover:text-primary-light">{t('nav.features')}</a>
-                <a href="#pricing" className="block text-gray-300 hover:text-primary-light">{t('nav.pricing')}</a>
-                <a href="#contact" className="block text-gray-300 hover:text-primary-light">{t('nav.contact')}</a>
-              </>
-            )}
-            {user && (
-              <Link 
-                to="/dashboard" 
-                className="block text-gray-300 hover:text-primary-light"
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-secondary-dark"
+                onClick={() => setIsOpen(false)}
               >
-                {t('nav.dashboard')}
-              </Link>
-            )}
+                {item.label}
+              </a>
+            ))}
+            
             {user ? (
-              <div className="py-2">
-                <ProfileDropdown />
-              </div>
+              <>
+                <Link 
+                  to="/dashboard" 
+                  className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-secondary-dark"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t('nav.dashboard')}
+                </Link>
+                <div className="px-3 py-2">
+                  <ProfileDropdown />
+                </div>
+              </>
             ) : (
               <button 
-                onClick={() => setShowAuthModal(true)}
-                className="w-full bg-gradient-primary text-secondary px-4 py-2 rounded-md hover:opacity-90 transition-opacity font-medium"
+                onClick={() => {
+                  setShowAuthModal(true);
+                  setIsOpen(false);
+                }}
+                className="w-full mt-2 bg-gradient-primary text-secondary px-3 py-2 rounded-md hover:opacity-90 transition-opacity font-medium"
               >
                 {t('nav.signIn')}
               </button>
@@ -101,6 +136,7 @@ export default function Navbar() {
         </div>
       )}
 
+      {/* Auth Modal */}
       <AuthModal 
         isOpen={showAuthModal} 
         onClose={() => setShowAuthModal(false)} 

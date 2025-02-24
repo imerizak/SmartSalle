@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "organization": "Organization Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "organizationPlaceholder": "Enter your organization name",
+    "loading": "Loading...",
+    "needAccount": "Need an account? Sign up",
+    "haveAccount": "Already have an account? Sign in",
+    "signInSuccess": "Signed in successfully",
+    "signOutSuccess": "Signed out successfully",
+    "verifyEmail": "Please check your email to verify your account",
+    "emailVerificationNote": "You'll need to verify your email before signing in",
+    "passwordRequirements": "Password does not meet requirements"
+  },
+  "dashboard": {
+    "overview": "Overview",
+    "members": "Members",
+    "coaches": "Coaches",
+    "attendance": "Attendance",
+    "schedule": "Schedule",
+    "payments": "Payments",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "events": "Events"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading..."
+  }
+}

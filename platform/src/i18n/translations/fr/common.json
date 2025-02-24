@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "getStarted": "Commencer",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "dashboard": "Tableau de bord"
+  },
+  "actions": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "confirm": "Confirmer",
+    "back": "Retour"
+  },
+  "status": {
+    "loading": "Chargement...",
+    "success": "Succès",
+    "error": "Erreur",
+    "active": "Actif",
+    "inactive": "Inactif"
+  }
+}

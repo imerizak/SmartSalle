@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "status": {
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "active": "Active",
+    "inactive": "Inactive"
+  }
+}

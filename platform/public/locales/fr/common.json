@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "getStarted": "Commencer",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "dashboard": "Tableau de bord"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "fullName": "Nom complet",
+    "organization": "Nom de l'organisation",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "organizationPlaceholder": "Entrez le nom de votre organisation",
+    "loading": "Chargement...",
+    "needAccount": "Besoin d'un compte ? Inscrivez-vous",
+    "haveAccount": "Déjà un compte ? Connectez-vous",
+    "signInSuccess": "Connexion réussie",
+    "signOutSuccess": "Déconnexion réussie"
+  },
+  "dashboard": {
+    "overview": "Vue d'ensemble",
+    "members": "Membres",
+    "coaches": "Coachs",
+    "attendance": "Présence",
+    "schedule": "Planning",
+    "payments": "Paiements",
+    "analytics": "Analyses",
+    "settings": "Paramètres",
+    "events": "Événements"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement..."
+  }
+}

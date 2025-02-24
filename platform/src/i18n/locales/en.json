@@ -8,30 +8,6 @@
     "signOut": "Sign Out",
     "dashboard": "Dashboard"
   },
-  "hero": {
-    "title1": "Manage Your Gym",
-    "title2": "Like Never Before"
-  },
-  "features": {
-    "title": "Everything You Need",
-    "subtitle": "Powerful tools to manage your fitness business",
-    "memberManagement": {
-      "title": "Member Management",
-      "description": "Track memberships, payments, and attendance with ease"
-    },
-    "classScheduling": {
-      "title": "Class Scheduling",
-      "description": "Organize classes and manage bookings efficiently"
-    },
-    "paymentProcessing": {
-      "title": "Payment Processing",
-      "description": "Handle payments and subscriptions seamlessly"
-    },
-    "analytics": {
-      "title": "Analytics & Reports",
-      "description": "Make data-driven decisions with detailed insights"
-    }
-  },
   "auth": {
     "signIn": "Sign In",
     "signUp": "Sign Up",
@@ -73,60 +49,6 @@
     "number": "At least one number",
     "special": "At least one special character"
   },
-  "coaches": {
-    "title": "Coaches",
-    "subtitle": "Manage your fitness coaches and trainers",
-    "addNew": "Add New Coach",
-    "search": "Search coaches...",
-    "add": "Add Coach",
-    "edit": "Edit Coach",
-    "update": "Update Coach",
-    "create": "Create Coach",
-    "addSuccess": "Coach added successfully",
-    "updateSuccess": "Coach updated successfully",
-    "deleteSuccess": "Coach deleted successfully",
-    "deleteConfirm": "Are you sure you want to delete this coach?",
-    "allSpecialties": "All Specialties",
-    "specialties": "Specialties",
-    "certifications": "Certifications",
-    "form": {
-      "name": "Full Name",
-      "email": "Email",
-      "phone": "Phone Number",
-      "experience": "Years of Experience",
-      "specialties": "Specialties",
-      "addSpecialty": "Add a specialty",
-      "certifications": "Certifications",
-      "addCertification": "Add a certification",
-      "availability": "Availability",
-      "bio": "Bio",
-      "status": "Status"
-    },
-    "status": {
-      "active": "Active",
-      "inactive": "Inactive"
-    }
-  },
-  "common": {
-    "save": "Save Changes",
-    "cancel": "Cancel",
-    "backToDashboard": "Back to Dashboard"
-  },
-  "profile": {
-    "title": "Profile Settings",
-    "viewProfile": "View Profile",
-    "fullName": "Full Name",
-    "email": "Email Address",
-    "phone": "Phone Number",
-    "organization": "Organization",
-    "edit": "Edit Profile",
-    "save": "Save Changes",
-    "cancel": "Cancel",
-    "updateSuccess": "Profile updated successfully",
-    "updateError": "Failed to update profile",
-    "changePhoto": "Change Photo",
-    "uploadPhoto": "Upload Photo"
-  },
   "dashboard": {
     "overview": "Overview",
     "members": "Members",
@@ -138,150 +60,149 @@
     "settings": "Settings",
     "events": "Events",
     "welcomeMessage": "Welcome to your SmartSalle Dashboard",
-    "organizationInfo": "Managing: {organization}"
+    "organizationInfo": "Managing: {organization}",
+    "stats": {
+      "activeMembers": "Active Members",
+      "monthlyRevenue": "Monthly Revenue",
+      "classAttendance": "Class Attendance",
+      "upcomingClasses": "Upcoming Classes"
+    }
   },
-  "events": {
-    "title": "Event Management",
-    "subtitle": "Manage gym events and activities",
-    "addNew": "Add New Event",
-    "search": "Search events...",
-    "add": "Add Event",
-    "edit": "Edit Event",
-    "update": "Update Event",
-    "create": "Create Event",
-    "addSuccess": "Event added successfully",
-    "updateSuccess": "Event updated successfully",
-    "deleteSuccess": "Event deleted successfully",
-    "deleteConfirm": "Are you sure you want to delete this event?",
-    "registered": "registered",
-    "form": {
-      "title": "Title",
-      "description": "Description",
-      "date": "Date & Time",
-      "duration": "Duration (minutes)",
-      "capacity": "Capacity",
-      "location": "Location",
-      "instructor": "Instructor",
-      "type": "Event Type",
-      "status": "Status"
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your gym settings and preferences",
+    "messages": {
+      "saveSuccess": "Settings saved successfully",
+      "saveError": "Failed to save settings"
     },
-    "types": {
-      "class": "Class",
-      "workshop": "Workshop",
-      "competition": "Competition",
-      "seminar": "Seminar"
+    "tabs": {
+      "general": "General",
+      "notifications": "Notifications",
+      "security": "Security",
+      "billing": "Billing",
+      "team": "Team",
+      "privacy": "Privacy"
     },
-    "status": {
-      "all": "All",
-      "upcoming": "Upcoming",
-      "ongoing": "Ongoing",
-      "completed": "Completed"
+    "general": {
+      "title": "General Settings",
+      "gymName": "Gym Name",
+      "language": "Language",
+      "timezone": "Timezone",
+      "dateFormat": "Date Format",
+      "timeFormat": "Time Format"
     },
     "notifications": {
-      "newEvent": "New Event Added",
-      "eventUpdated": "Event Updated",
-      "eventCancelled": "Event Cancelled",
-      "reminderTitle": "Event Reminder",
-      "reminderBody": "Your event starts in {time}"
-    }
-  },
-  "members": {
-    "title": "Members",
-    "addNew": "Add New Member",
-    "search": "Search members...",
-    "add": "Add Member",
-    "edit": "Edit Member",
-    "update": "Update Member",
-    "create": "Create Member",
-    "addSuccess": "Member added successfully",
-    "updateSuccess": "Member updated successfully",
-    "deleteSuccess": "Member deleted successfully",
-    "deleteConfirm": "Are you sure you want to delete this member?",
-    "table": {
-      "name": "Name",
-      "contact": "Contact",
-      "membership": "Membership",
-      "status": "Status",
-      "joinDate": "Join Date",
-      "actions": "Actions"
+      "title": "Notification Settings",
+      "browser": "Browser Notifications",
+      "browserDescription": "Receive notifications in your browser",
+      "browserPermissionDenied": "Browser notifications permission denied",
+      "email": "Email Notifications",
+      "emailNewMembers": "New member registrations",
+      "emailPayments": "Payment updates",
+      "emailClassBookings": "Class bookings",
+      "emailSystemUpdates": "System updates",
+      "push": "Push Notifications",
+      "pushCheckIns": "Member check-ins",
+      "pushLowAttendance": "Low attendance alerts",
+      "pushMembershipExpiry": "Membership expiry reminders",
+      "pushDailyReport": "Daily reports"
     },
-    "form": {
+    "security": {
+      "title": "Security Settings",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "updatePassword": "Update Password",
+      "passwordMismatch": "Passwords do not match",
+      "passwordUpdateSuccess": "Password updated successfully",
+      "passwordUpdateError": "Failed to update password",
+      "twoFactor": "Two-Factor Authentication",
+      "twoFactorDescription": "Add an extra layer of security to your account",
+      "enableTwoFactor": "Enable Two-Factor Authentication",
+      "activeSessions": "Active Sessions"
+    },
+    "billing": {
+      "title": "Billing Settings",
+      "currentPlan": "Current Plan",
+      "currentPlanButton": "Current Plan",
+      "switchPlanButton": "Switch Plan",
+      "paymentMethod": "Payment Method",
+      "updateCard": "Update Card",
+      "history": "Billing History",
+      "date": "Date",
+      "amount": "Amount",
+      "status": "Status",
+      "download": "Download",
+      "plans": {
+        "basic": {
+          "name": "Basic",
+          "feature1": "Up to 100 members",
+          "feature2": "Basic analytics",
+          "feature3": "Email support"
+        },
+        "premium": {
+          "name": "Premium",
+          "feature1": "Up to 500 members",
+          "feature2": "Advanced analytics",
+          "feature3": "Priority support"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "feature1": "Unlimited members",
+          "feature2": "Custom features",
+          "feature3": "24/7 support"
+        }
+      }
+    },
+    "team": {
+      "inviteTitle": "Invite Team Member",
+      "membersTitle": "Team Members",
+      "emailPlaceholder": "Enter email address",
+      "invite": "Send Invite",
+      "inviteSent": "Invitation sent successfully",
       "name": "Name",
       "email": "Email",
-      "phone": "Phone",
-      "membership": "Membership Type",
+      "role": "Role",
       "status": "Status",
-      "joinDate": "Join Date"
-    },
-    "memberships": {
-      "basic": "Basic",
-      "premium": "Premium",
-      "vip": "VIP"
-    },
-    "status": {
-      "active": "Active",
-      "inactive": "Inactive"
-    }
-  },
-  "attendance": {
-    "title": "Attendance",
-    "subtitle": "Track member check-ins and check-outs",
-    "scanQR": "Scan QR",
-    "search": "Search members...",
-    "active": "Active",
-    "scanQRCode": "Scan QR Code",
-    "scanningQR": "Scanning...",
-    "scanInstructions": "Position the QR code within the frame",
-    "stats": {
-      "totalVisits": "Total Visits",
-      "uniqueVisitors": "Unique Visitors",
-      "averageVisitDuration": "Average Duration"
-    },
-    "filters": {
-      "all": "All Time",
-      "today": "Today",
-      "thisWeek": "This Week",
-      "thisMonth": "This Month"
-    },
-    "table": {
-      "member": "Member",
-      "checkIn": "Check In",
-      "checkOut": "Check Out",
-      "duration": "Duration",
-      "type": "Type"
-    },
-    "messages": {
-      "success": {
-        "checkIn": "Check-in successful",
-        "checkOut": "Check-out successful"
-      },
-      "error": {
-        "invalidQR": "Invalid QR code",
-        "scanError": "Error scanning QR code"
+      "actions": "Actions",
+      "roles": {
+        "admin": "Administrator",
+        "staff": "Staff Member",
+        "trainer": "Trainer"
       }
+    },
+    "privacy": {
+      "title": "Privacy Settings",
+      "dataSharing": "Data Sharing",
+      "shareAnalytics": "Share Analytics",
+      "shareAnalyticsDescription": "Share anonymous usage data to help improve the platform",
+      "memberPhotos": "Member Photos",
+      "memberPhotosDescription": "Allow members to upload and display profile photos",
+      "dataRetention": "Data Retention",
+      "retention": {
+        "6months": "6 months",
+        "12months": "12 months",
+        "24months": "24 months",
+        "forever": "Keep forever"
+      },
+      "marketingPreferences": "Marketing Preferences",
+      "marketing": "Marketing Communications",
+      "marketingDescription": "Receive updates about new features and promotions",
+      "thirdParty": "Third-Party Sharing",
+      "thirdPartyDescription": "Allow sharing data with trusted partners"
     }
   },
-  "payments": {
-    "title": "Payments",
-    "subtitle": "Manage member payments and subscriptions",
-    "search": "Search payments...",
-    "all": "All",
-    "paid": "Paid",
-    "pending": "Pending",
-    "totalAmount": "Total Amount",
-    "paidAmount": "Paid Amount",
-    "pendingAmount": "Pending Amount",
-    "statusDistribution": "Payment Status Distribution",
-    "table": {
-      "member": "Member",
-      "amount": "Amount",
-      "dueDate": "Due Date",
-      "status": "Status",
-      "membership": "Membership"
-    },
-    "status": {
-      "paid": "Paid",
-      "pending": "Pending"
-    }
+  "common": {
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "confirm": "Confirm",
+    "back": "Back"
   }
 }

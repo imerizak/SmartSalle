@@ -1,0 +1,42 @@
+{
+  "title": "الإعدادات",
+  "subtitle": "إدارة إعدادات صالتك الرياضية",
+  "messages": {
+    "saveSuccess": "تم حفظ الإعدادات بنجاح",
+    "saveError": "فشل في حفظ الإعدادات"
+  },
+  "billing": {
+    "title": "إعدادات الفواتير",
+    "currentPlan": "الخطة الحالية",
+    "currentPlanButton": "الخطة الحالية",
+    "switchPlanButton": "التحويل إلى هذه الخطة",
+    "paymentMethod": "طريقة الدفع",
+    "updateCard": "تحديث البطاقة",
+    "history": "سجل الفواتير",
+    "date": "التاريخ",
+    "amount": "المبلغ",
+    "status": "الحالة",
+    "download": "تحميل",
+    "downloadInvoice": "تحميل الفاتورة",
+    "plans": {
+      "basic": {
+        "name": "أساسي",
+        "feature1": "حتى 100 عضو",
+        "feature2": "تحليلات أساسية",
+        "feature3": "دعم بالبريد الإلكتروني"
+      },
+      "premium": {
+        "name": "بريميوم",
+        "feature1": "حتى 500 عضو",
+        "feature2": "تحليلات متقدمة",
+        "feature3": "دعم ذو أولوية"
+      },
+      "enterprise": {
+        "name": "مؤسسات",
+        "feature1": "أعضاء غير محدودين",
+        "feature2": "ميزات مخصصة",
+        "feature3": "دعم على مدار الساعة"
+      }
+    }
+  }
+}

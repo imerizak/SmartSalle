@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "features": "المميزات",
+    "pricing": "الأسعار",
+    "contact": "اتصل بنا",
+    "getStarted": "ابدأ الآن",
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "dashboard": "لوحة التحكم"
+  },
+  "actions": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "confirm": "تأكيد",
+    "back": "رجوع"
+  },
+  "status": {
+    "loading": "جاري التحميل...",
+    "success": "تم بنجاح",
+    "error": "خطأ",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  }
+}

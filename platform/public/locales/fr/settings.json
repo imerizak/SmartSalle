@@ -1,0 +1,42 @@
+{
+  "title": "Paramètres",
+  "subtitle": "Gérez les paramètres de votre salle",
+  "messages": {
+    "saveSuccess": "Paramètres enregistrés avec succès",
+    "saveError": "Échec de l'enregistrement des paramètres"
+  },
+  "billing": {
+    "title": "Paramètres de facturation",
+    "currentPlan": "Forfait actuel",
+    "currentPlanButton": "Forfait actuel",
+    "switchPlanButton": "Choisir ce forfait",
+    "paymentMethod": "Moyen de paiement",
+    "updateCard": "Mettre à jour la carte",
+    "history": "Historique de facturation",
+    "date": "Date",
+    "amount": "Montant",
+    "status": "Statut",
+    "download": "Télécharger",
+    "downloadInvoice": "Télécharger la facture",
+    "plans": {
+      "basic": {
+        "name": "Basique",
+        "feature1": "Jusqu'à 100 membres",
+        "feature2": "Analyses basiques",
+        "feature3": "Support par email"
+      },
+      "premium": {
+        "name": "Premium",
+        "feature1": "Jusqu'à 500 membres",
+        "feature2": "Analyses avancées",
+        "feature3": "Support prioritaire"
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "feature1": "Membres illimités",
+        "feature2": "Fonctionnalités personnalisées",
+        "feature3": "Support 24/7"
+      }
+    }
+  }
+}

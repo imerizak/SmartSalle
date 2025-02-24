@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "features": "المميزات",
+    "pricing": "الأسعار",
+    "contact": "اتصل بنا",
+    "getStarted": "ابدأ الآن",
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "dashboard": "لوحة التحكم"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "organization": "اسم المؤسسة",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "organizationPlaceholder": "أدخل اسم مؤسستك",
+    "loading": "جاري التحميل...",
+    "needAccount": "تحتاج حساب؟ سجل الآن",
+    "haveAccount": "لديك حساب؟ سجل دخولك",
+    "signInSuccess": "تم تسجيل الدخول بنجاح",
+    "signOutSuccess": "تم تسجيل الخروج بنجاح"
+  },
+  "dashboard": {
+    "overview": "نظرة عامة",
+    "members": "الأعضاء",
+    "coaches": "المدربين",
+    "attendance": "الحضور",
+    "schedule": "الجدول",
+    "payments": "المدفوعات",
+    "analytics": "التحليلات",
+    "settings": "الإعدادات",
+    "events": "الفعاليات"
+  },
+  "common": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "loading": "جاري التحميل..."
+  }
+}

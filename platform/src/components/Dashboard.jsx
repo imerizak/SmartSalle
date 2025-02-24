@@ -8,28 +8,26 @@ import {
   FiCalendar, 
   FiDollarSign, 
   FiSettings,
-  FiLogOut,
   FiBell,
   FiUser,
   FiUserCheck
 } from 'react-icons/fi';
 import Logo from './Logo';
-import MembershipGraph from './dashboard/MembershipGraph';
-import StatsCard from './dashboard/StatsCard';
+import Overview from './Overview';
 import MembersPanel from './members/MembersPanel';
 import PaymentsPanel from './payments/PaymentsPanel';
 import AttendancePanel from './attendance/AttendancePanel';
 import EventsPanel from './events/EventsPanel';
 import CoachesPanel from './coaches/CoachesPanel';
+import SettingsPanel from './settings/SettingsPanel';
 import ProfileDropdown from './profile/ProfileDropdown';
-import Overview from './Overview';
 
 export default function Dashboard() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
+  const { user } = useAuth();
   
-  // Get the current active tab from the URL path
   const getCurrentTab = () => {
     const path = location.pathname.split('/')[2] || 'overview';
     return path;
@@ -55,7 +53,7 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-100" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Sidebar */}
-      <div className="w-64 bg-secondary text-white shadow-lg relative">
+      <div className="w-64 bg-secondary text-white shadow-lg">
         <div className="p-4">
           <Logo />
         </div>
@@ -85,7 +83,7 @@ export default function Dashboard() {
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto py-4 px-4">
+          <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-secondary">
                 {menuItems.find(item => item.id === activeTab)?.label}
@@ -111,7 +109,7 @@ export default function Dashboard() {
             <Route path="/attendance" element={<AttendancePanel />} />
             <Route path="/events" element={<EventsPanel />} />
             <Route path="/payments" element={<PaymentsPanel />} />
-            <Route path="/settings" element={<div className="p-6">Settings Content</div>} />
+            <Route path="/settings" element={<SettingsPanel />} />
           </Routes>
         </main>
       </div>

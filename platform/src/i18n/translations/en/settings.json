@@ -1,0 +1,42 @@
+{
+  "title": "Settings",
+  "subtitle": "Manage your gym settings and preferences",
+  "messages": {
+    "saveSuccess": "Settings saved successfully",
+    "saveError": "Failed to save settings"
+  },
+  "billing": {
+    "title": "Billing Settings",
+    "currentPlan": "Current Plan",
+    "currentPlanButton": "Current Plan",
+    "switchPlanButton": "Switch to this Plan",
+    "paymentMethod": "Payment Method",
+    "updateCard": "Update Card",
+    "history": "Billing History",
+    "date": "Date",
+    "amount": "Amount",
+    "status": "Status",
+    "download": "Download",
+    "downloadInvoice": "Download Invoice",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "feature1": "Up to 100 members",
+        "feature2": "Basic analytics",
+        "feature3": "Email support"
+      },
+      "premium": {
+        "name": "Premium",
+        "feature1": "Up to 500 members",
+        "feature2": "Advanced analytics",
+        "feature3": "Priority support"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "feature1": "Unlimited members",
+        "feature2": "Custom features",
+        "feature3": "24/7 support"
+      }
+    }
+  }
+}

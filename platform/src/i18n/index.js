@@ -17,6 +17,7 @@ i18n
     fallbackLng: 'en',
     debug: import.meta.env.DEV,
     
+    ns: ['common', 'dashboard', 'settings'],
     defaultNS: 'common',
     
     interpolation: {

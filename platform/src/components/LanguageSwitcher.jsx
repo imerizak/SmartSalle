@@ -6,17 +6,20 @@ const languages = [
   {
     code: 'en',
     name: 'English',
-    flag: '🇬🇧'
+    flag: '🇬🇧',
+    dir: 'ltr'
   },
   {
     code: 'fr',
     name: 'Français',
-    flag: '🇫🇷'
+    flag: '🇫🇷',
+    dir: 'ltr'
   },
   {
     code: 'ar',
     name: 'العربية',
-    flag: '🇸🇦'
+    flag: '🇸🇦',
+    dir: 'rtl'
   }
 ];
 
@@ -28,7 +31,13 @@ export default function LanguageSwitcher() {
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+    const language = languages.find(lang => lang.code === lng);
+    if (language) {
+      document.documentElement.dir = language.dir;
+      document.documentElement.lang = lng;
+      i18n.changeLanguage(lng);
+      localStorage.setItem('language', lng);
+    }
     setIsOpen(false);
   };
 

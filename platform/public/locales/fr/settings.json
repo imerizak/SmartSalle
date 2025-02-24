@@ -5,6 +5,52 @@
     "saveSuccess": "Paramètres enregistrés avec succès",
     "saveError": "Échec de l'enregistrement des paramètres"
   },
+  "tabs": {
+    "general": "Général",
+    "notifications": "Notifications",
+    "security": "Sécurité",
+    "billing": "Facturation",
+    "team": "Équipe",
+    "privacy": "Confidentialité"
+  },
+  "general": {
+    "title": "Paramètres généraux",
+    "gymName": "Nom de la salle",
+    "language": "Langue",
+    "timezone": "Fuseau horaire",
+    "dateFormat": "Format de date",
+    "timeFormat": "Format d'heure"
+  },
+  "notifications": {
+    "title": "Paramètres de notification",
+    "browser": "Notifications du navigateur",
+    "browserDescription": "Recevoir des notifications dans votre navigateur",
+    "browserPermissionDenied": "Permission de notification refusée",
+    "email": "Notifications par email",
+    "emailNewMembers": "Nouvelles inscriptions",
+    "emailPayments": "Mises à jour des paiements",
+    "emailClassBookings": "Réservations de cours",
+    "emailSystemUpdates": "Mises à jour système",
+    "push": "Notifications push",
+    "pushCheckIns": "Enregistrements des membres",
+    "pushLowAttendance": "Alertes de faible fréquentation",
+    "pushMembershipExpiry": "Rappels d'expiration d'abonnement",
+    "pushDailyReport": "Rapports quotidiens"
+  },
+  "security": {
+    "title": "Paramètres de sécurité",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "passwordUpdateSuccess": "Mot de passe mis à jour avec succès",
+    "passwordUpdateError": "Échec de la mise à jour du mot de passe",
+    "twoFactor": "Authentification à deux facteurs",
+    "twoFactorDescription": "Ajoutez une couche de sécurité supplémentaire",
+    "enableTwoFactor": "Activer l'authentification à deux facteurs",
+    "activeSessions": "Sessions actives"
+  },
   "billing": {
     "title": "Paramètres de facturation",
     "currentPlan": "Forfait actuel",
@@ -38,5 +84,42 @@
         "feature3": "Support 24/7"
       }
     }
+  },
+  "team": {
+    "inviteTitle": "Inviter un membre de l'équipe",
+    "membersTitle": "Membres de l'équipe",
+    "emailPlaceholder": "Entrer l'adresse email",
+    "invite": "Envoyer l'invitation",
+    "inviteSent": "Invitation envoyée avec succès",
+    "name": "Nom",
+    "email": "Email",
+    "role": "Rôle",
+    "status": "Statut",
+    "actions": "Actions",
+    "roles": {
+      "admin": "Administrateur",
+      "staff": "Membre du personnel",
+      "trainer": "Entraîneur"
+    }
+  },
+  "privacy": {
+    "title": "Paramètres de confidentialité",
+    "dataSharing": "Partage de données",
+    "shareAnalytics": "Partager les analyses",
+    "shareAnalyticsDescription": "Partager des données d'utilisation anonymes",
+    "memberPhotos": "Photos des membres",
+    "memberPhotosDescription": "Autoriser les membres à télécharger des photos",
+    "dataRetention": "Conservation des données",
+    "retention": {
+      "6months": "6 mois",
+      "12months": "12 mois",
+      "24months": "24 mois",
+      "forever": "Conserver indéfiniment"
+    },
+    "marketingPreferences": "Préférences marketing",
+    "marketing": "Communications marketing",
+    "marketingDescription": "Recevoir des mises à jour sur les nouvelles fonctionnalités",
+    "thirdParty": "Partage tiers",
+    "thirdPartyDescription": "Autoriser le partage avec des partenaires de confiance"
   }
 }

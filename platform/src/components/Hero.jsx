@@ -12,10 +12,9 @@ export default function Hero() {
             <Logo size="large" />
           </div>
           <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
-            <span className="block">{t('hero.title1')}</span>
-            <span className="block gradient-text">{t('hero.title2')}</span>
+            <span className="block">{t('hero.title1', 'Manage Your Gym')}</span>
+            <span className="block gradient-text">{t('hero.title2', 'Like Never Before')}</span>
           </h1>
-          {/* ... rest of the hero code ... */}
         </div>
       </div>
     </div>

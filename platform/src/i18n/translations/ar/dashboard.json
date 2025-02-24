@@ -1,0 +1,19 @@
+{
+  "overview": "نظرة عامة",
+  "members": "الأعضاء",
+  "coaches": "المدربين",
+  "attendance": "الحضور",
+  "schedule": "الجدول",
+  "payments": "المدفوعات",
+  "analytics": "التحليلات",
+  "settings": "الإعدادات",
+  "events": "الفعاليات",
+  "welcomeMessage": "مرحباً بك في لوحة تحكم سمارت صالة",
+  "organizationInfo": "إدارة: {organization}",
+  "stats": {
+    "activeMembers": "الأعضاء النشطين",
+    "monthlyRevenue": "الإيرادات الشهرية",
+    "classAttendance": "حضور الحصص",
+    "upcomingClasses": "الحصص القادمة"
+  }
+}

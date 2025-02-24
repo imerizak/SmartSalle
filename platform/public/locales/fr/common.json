@@ -21,24 +21,57 @@
     "needAccount": "Besoin d'un compte ? Inscrivez-vous",
     "haveAccount": "Déjà un compte ? Connectez-vous",
     "signInSuccess": "Connexion réussie",
-    "signOutSuccess": "Déconnexion réussie"
+    "signOutSuccess": "Déconnexion réussie",
+    "verifyEmail": "Veuillez vérifier votre email",
+    "emailVerificationNote": "Vous devez vérifier votre email avant de vous connecter",
+    "passwordRequirements": "Le mot de passe ne répond pas aux exigences"
   },
-  "dashboard": {
-    "overview": "Vue d'ensemble",
-    "members": "Membres",
-    "coaches": "Coachs",
-    "attendance": "Présence",
-    "schedule": "Planning",
-    "payments": "Paiements",
-    "analytics": "Analyses",
-    "settings": "Paramètres",
-    "events": "Événements"
+  "password": {
+    "minLength": "Au moins 8 caractères",
+    "upperCase": "Au moins une majuscule",
+    "lowerCase": "Au moins une minuscule",
+    "number": "Au moins un chiffre",
+    "special": "Au moins un caractère spécial"
   },
-  "common": {
+  "actions": {
     "save": "Enregistrer",
     "cancel": "Annuler",
     "delete": "Supprimer",
     "edit": "Modifier",
-    "loading": "Chargement..."
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "confirm": "Confirmer",
+    "back": "Retour"
+  },
+  "status": {
+    "loading": "Chargement...",
+    "success": "Succès",
+    "error": "Erreur",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "hero": {
+    "title1": "Gérez Votre Salle",
+    "title2": "Comme Jamais Auparavant"
+  },
+  "features": {
+    "title": "Fonctionnalités",
+    "subtitle": "Tout ce dont vous avez besoin pour gérer votre salle efficacement",
+    "memberManagement": {
+      "title": "Gestion des Membres",
+      "description": "Gérez facilement vos membres, suivez leurs progrès et gérez les abonnements"
+    },
+    "classScheduling": {
+      "title": "Planification des Cours",
+      "description": "Créez et gérez les horaires des cours, gérez les réservations et la présence"
+    },
+    "paymentProcessing": {
+      "title": "Traitement des Paiements",
+      "description": "Traitez les paiements, gérez les abonnements et suivez les revenus"
+    },
+    "analytics": {
+      "title": "Analyses et Rapports",
+      "description": "Obtenez des insights sur votre entreprise avec des analyses détaillées"
+    }
   }
 }

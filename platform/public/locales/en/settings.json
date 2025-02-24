@@ -5,6 +5,52 @@
     "saveSuccess": "Settings saved successfully",
     "saveError": "Failed to save settings"
   },
+  "tabs": {
+    "general": "General",
+    "notifications": "Notifications",
+    "security": "Security",
+    "billing": "Billing",
+    "team": "Team",
+    "privacy": "Privacy"
+  },
+  "general": {
+    "title": "General Settings",
+    "gymName": "Gym Name",
+    "language": "Language",
+    "timezone": "Timezone",
+    "dateFormat": "Date Format",
+    "timeFormat": "Time Format"
+  },
+  "notifications": {
+    "title": "Notification Settings",
+    "browser": "Browser Notifications",
+    "browserDescription": "Receive notifications in your browser",
+    "browserPermissionDenied": "Browser notifications permission denied",
+    "email": "Email Notifications",
+    "emailNewMembers": "New member registrations",
+    "emailPayments": "Payment updates",
+    "emailClassBookings": "Class bookings",
+    "emailSystemUpdates": "System updates",
+    "push": "Push Notifications",
+    "pushCheckIns": "Member check-ins",
+    "pushLowAttendance": "Low attendance alerts",
+    "pushMembershipExpiry": "Membership expiry reminders",
+    "pushDailyReport": "Daily reports"
+  },
+  "security": {
+    "title": "Security Settings",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updatePassword": "Update Password",
+    "passwordMismatch": "Passwords do not match",
+    "passwordUpdateSuccess": "Password updated successfully",
+    "passwordUpdateError": "Failed to update password",
+    "twoFactor": "Two-Factor Authentication",
+    "twoFactorDescription": "Add an extra layer of security to your account",
+    "enableTwoFactor": "Enable Two-Factor Authentication",
+    "activeSessions": "Active Sessions"
+  },
   "billing": {
     "title": "Billing Settings",
     "currentPlan": "Current Plan",
@@ -38,5 +84,42 @@
         "feature3": "24/7 support"
       }
     }
+  },
+  "team": {
+    "inviteTitle": "Invite Team Member",
+    "membersTitle": "Team Members",
+    "emailPlaceholder": "Enter email address",
+    "invite": "Send Invite",
+    "inviteSent": "Invitation sent successfully",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "status": "Status",
+    "actions": "Actions",
+    "roles": {
+      "admin": "Administrator",
+      "staff": "Staff Member",
+      "trainer": "Trainer"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Settings",
+    "dataSharing": "Data Sharing",
+    "shareAnalytics": "Share Analytics",
+    "shareAnalyticsDescription": "Share anonymous usage data to help improve the platform",
+    "memberPhotos": "Member Photos",
+    "memberPhotosDescription": "Allow members to upload and display profile photos",
+    "dataRetention": "Data Retention",
+    "retention": {
+      "6months": "6 months",
+      "12months": "12 months",
+      "24months": "24 months",
+      "forever": "Keep forever"
+    },
+    "marketingPreferences": "Marketing Preferences",
+    "marketing": "Marketing Communications",
+    "marketingDescription": "Receive updates about new features and promotions",
+    "thirdParty": "Third-Party Sharing",
+    "thirdPartyDescription": "Allow sharing data with trusted partners"
   }
 }

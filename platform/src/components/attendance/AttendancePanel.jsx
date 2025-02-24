@@ -4,36 +4,33 @@ import { FiSearch, FiX, FiUserCheck, FiUsers, FiClock, FiPlus } from 'react-icon
 import QRScanner from './QRScanner';
 import toast from 'react-hot-toast';
 
-// Mock data - replace with actual data from your backend
-const mockAttendance = [
-  {
-    id: 1,
-    memberId: 'MEM001',
-    memberName: 'John Doe',
-    checkIn: '2023-08-15T09:00:00',
-    checkOut: '2023-08-15T10:30:00',
-    duration: 90,
-    type: 'Gym Session'
-  },
-  {
-    id: 2,
-    memberId: 'MEM002',
-    memberName: 'Jane Smith',
-    checkIn: '2023-08-15T10:00:00',
-    checkOut: null,
-    duration: null,
-    type: 'Yoga Class'
-  }
-];
-
 export default function AttendancePanel() {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [currentFilter, setCurrentFilter] = useState('all');
   const [showScanner, setShowScanner] = useState(false);
-  const [attendance, setAttendance] = useState(mockAttendance);
+  const [attendance, setAttendance] = useState([
+    {
+      id: 1,
+      memberId: 'MEM001',
+      memberName: 'John Doe',
+      checkIn: '2024-02-15T09:00:00',
+      checkOut: '2024-02-15T10:30:00',
+      duration: 90,
+      type: 'Gym Session'
+    },
+    {
+      id: 2,
+      memberId: 'MEM002',
+      memberName: 'Jane Smith',
+      checkIn: '2024-02-15T10:00:00',
+      checkOut: null,
+      duration: null,
+      type: 'Yoga Class'
+    }
+  ]);
 
-  // Calculate average stay time
+  // Calculate stats
   const averageStayTime = Math.round(
     attendance
       .filter(record => record.duration)
@@ -44,26 +41,25 @@ export default function AttendancePanel() {
   const stats = [
     {
       icon: FiUserCheck,
-      title: t('attendance.stats.totalVisits', 'Total Visits'),
+      title: t('dashboard.attendance.stats.totalVisits'),
       value: attendance.length,
       color: 'primary'
     },
     {
       icon: FiUsers,
-      title: t('attendance.stats.uniqueVisitors', 'Unique Visitors'),
+      title: t('dashboard.attendance.stats.uniqueVisitors'),
       value: new Set(attendance.map(record => record.memberId)).size,
       color: 'success'
     },
     {
       icon: FiClock,
-      title: t('attendance.stats.averageVisitDuration', 'Average Duration'),
+      title: t('dashboard.attendance.stats.averageVisitDuration'),
       value: `${averageStayTime} min`,
       color: 'warning'
     }
   ];
 
   const handleScan = (memberId) => {
-    // In real app, validate member and handle check-in/out
     const member = attendance.find(record => 
       record.memberId === memberId && !record.checkOut
     );
@@ -80,7 +76,7 @@ export default function AttendancePanel() {
           : record
       );
       setAttendance(updatedAttendance);
-      toast.success(t('attendance.messages.success.checkOut', 'Check-out successful'));
+      toast.success(t('dashboard.attendance.messages.success.checkOut'));
     } else {
       // Check-in
       const newRecord = {
@@ -93,7 +89,7 @@ export default function AttendancePanel() {
         type: 'Gym Session'
       };
       setAttendance([newRecord, ...attendance]);
-      toast.success(t('attendance.messages.success.checkIn', 'Check-in successful'));
+      toast.success(t('dashboard.attendance.messages.success.checkIn'));
     }
     setShowScanner(false);
   };
@@ -133,10 +129,10 @@ export default function AttendancePanel() {
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-2xl font-semibold text-gray-900">
-            {t('attendance.title', 'Attendance')}
+            {t('dashboard.attendance.title')}
           </h2>
           <p className="text-sm text-gray-500">
-            {t('attendance.subtitle', 'Track member check-ins and check-outs')}
+            {t('dashboard.attendance.subtitle')}
           </p>
         </div>
         <button
@@ -144,7 +140,7 @@ export default function AttendancePanel() {
           className="bg-gradient-primary text-secondary px-4 py-2 rounded-md hover:opacity-90 transition-opacity flex items-center gap-2"
         >
           <FiPlus className="w-5 h-5" />
-          {t('attendance.scanQR', 'Scan QR')}
+          {t('dashboard.attendance.scanQR')}
         </button>
       </div>
 
@@ -175,7 +171,7 @@ export default function AttendancePanel() {
           <div className="relative">
             <input
               type="text"
-              placeholder={t('attendance.search', 'Search members...')}
+              placeholder={t('dashboard.attendance.search')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 pl-10 pr-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
@@ -202,7 +198,7 @@ export default function AttendancePanel() {
                   : 'bg-white text-gray-600 hover:bg-gray-100'
               }`}
             >
-              {t(`attendance.filters.${filter}`, filter)}
+              {t(`dashboard.attendance.filters.${filter}`)}
             </button>
           ))}
         </div>
@@ -215,19 +211,19 @@ export default function AttendancePanel() {
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  {t('attendance.table.member', 'Member')}
+                  {t('dashboard.attendance.table.member')}
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  {t('attendance.table.checkIn', 'Check In')}
+                  {t('dashboard.attendance.table.checkIn')}
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  {t('attendance.table.checkOut', 'Check Out')}
+                  {t('dashboard.attendance.table.checkOut')}
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  {t('attendance.table.duration', 'Duration')}
+                  {t('dashboard.attendance.table.duration')}
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  {t('attendance.table.type', 'Type')}
+                  {t('dashboard.attendance.table.type')}
                 </th>
               </tr>
             </thead>
@@ -255,7 +251,7 @@ export default function AttendancePanel() {
                     <div className="text-sm text-gray-900">
                       {record.checkOut 
                         ? new Date(record.checkOut).toLocaleString()
-                        : t('attendance.active', 'Active')}
+                        : t('dashboard.attendance.active')}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">

@@ -21,24 +21,57 @@
     "needAccount": "تحتاج حساب؟ سجل الآن",
     "haveAccount": "لديك حساب؟ سجل دخولك",
     "signInSuccess": "تم تسجيل الدخول بنجاح",
-    "signOutSuccess": "تم تسجيل الخروج بنجاح"
+    "signOutSuccess": "تم تسجيل الخروج بنجاح",
+    "verifyEmail": "يرجى التحقق من بريدك الإلكتروني",
+    "emailVerificationNote": "يجب التحقق من بريدك الإلكتروني قبل تسجيل الدخول",
+    "passwordRequirements": "كلمة المرور لا تلبي المتطلبات"
   },
-  "dashboard": {
-    "overview": "نظرة عامة",
-    "members": "الأعضاء",
-    "coaches": "المدربين",
-    "attendance": "الحضور",
-    "schedule": "الجدول",
-    "payments": "المدفوعات",
-    "analytics": "التحليلات",
-    "settings": "الإعدادات",
-    "events": "الفعاليات"
+  "password": {
+    "minLength": "٨ أحرف على الأقل",
+    "upperCase": "حرف كبير واحد على الأقل",
+    "lowerCase": "حرف صغير واحد على الأقل",
+    "number": "رقم واحد على الأقل",
+    "special": "رمز خاص واحد على الأقل"
   },
-  "common": {
+  "actions": {
     "save": "حفظ",
     "cancel": "إلغاء",
     "delete": "حذف",
     "edit": "تعديل",
-    "loading": "جاري التحميل..."
+    "create": "إنشاء",
+    "update": "تحديث",
+    "confirm": "تأكيد",
+    "back": "رجوع"
+  },
+  "status": {
+    "loading": "جاري التحميل...",
+    "success": "تم بنجاح",
+    "error": "خطأ",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "hero": {
+    "title1": "أدر صالتك الرياضية",
+    "title2": "بطريقة جديدة تماماً"
+  },
+  "features": {
+    "title": "المميزات",
+    "subtitle": "كل ما تحتاجه لإدارة صالتك الرياضية بكفاءة",
+    "memberManagement": {
+      "title": "إدارة الأعضاء",
+      "description": "إدارة سهلة للأعضاء، تتبع تقدمهم، وإدارة الاشتراكات"
+    },
+    "classScheduling": {
+      "title": "جدولة الحصص",
+      "description": "إنشاء وإدارة جداول الحصص، إدارة الحجوزات والحضور"
+    },
+    "paymentProcessing": {
+      "title": "معالجة المدفوعات",
+      "description": "معالجة المدفوعات، إدارة الاشتراكات، وتتبع الإيرادات"
+    },
+    "analytics": {
+      "title": "التحليلات والتقارير",
+      "description": "احصل على رؤى حول عملك مع تحليلات وتقارير مفصلة"
+    }
   }
 }

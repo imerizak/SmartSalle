@@ -24,24 +24,67 @@
     "signOutSuccess": "Signed out successfully",
     "verifyEmail": "Please check your email to verify your account",
     "emailVerificationNote": "You'll need to verify your email before signing in",
-    "passwordRequirements": "Password does not meet requirements"
+    "passwordRequirements": "Password does not meet requirements",
+    "errors": {
+      "invalidEmail": "Invalid email address format",
+      "userDisabled": "This account has been disabled",
+      "userNotFound": "No account found with this email",
+      "wrongPassword": "Incorrect password",
+      "emailInUse": "An account already exists with this email",
+      "weakPassword": "Password is too weak",
+      "invalidCredentials": "Invalid email or password",
+      "networkError": "Network connection error",
+      "tooManyRequests": "Too many attempts. Please try again later",
+      "serverError": "Server error. Please try again later",
+      "unknownError": "An unexpected error occurred"
+    }
   },
-  "dashboard": {
-    "overview": "Overview",
-    "members": "Members",
-    "coaches": "Coaches",
-    "attendance": "Attendance",
-    "schedule": "Schedule",
-    "payments": "Payments",
-    "analytics": "Analytics",
-    "settings": "Settings",
-    "events": "Events"
+  "password": {
+    "minLength": "At least 8 characters",
+    "upperCase": "At least one uppercase letter",
+    "lowerCase": "At least one lowercase letter",
+    "number": "At least one number",
+    "special": "At least one special character"
   },
-  "common": {
+  "actions": {
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "loading": "Loading..."
+    "create": "Create",
+    "update": "Update",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "status": {
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "hero": {
+    "title1": "Manage Your Gym",
+    "title2": "Like Never Before"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Everything you need to manage your gym efficiently",
+    "memberManagement": {
+      "title": "Member Management",
+      "description": "Easily manage your members, track their progress, and handle subscriptions"
+    },
+    "classScheduling": {
+      "title": "Class Scheduling",
+      "description": "Create and manage class schedules, handle bookings and attendance"
+    },
+    "paymentProcessing": {
+      "title": "Payment Processing",
+      "description": "Process payments, manage subscriptions, and track revenue"
+    },
+    "analytics": {
+      "title": "Analytics & Reports",
+      "description": "Get insights into your business with detailed analytics and reports"
+    }
   }
 }

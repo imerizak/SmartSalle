@@ -1,0 +1,29 @@
+{
+  "overview": "Vue d'ensemble",
+  "members": "Membres",
+  "coaches": "Coachs",
+  "attendance": "Présence",
+  "schedule": "Planning",
+  "payments": "Paiements",
+  "analytics": "Analyses",
+  "settings": "Paramètres",
+  "events": "Événements",
+  "welcomeMessage": "Bienvenue sur votre tableau de bord SmartSalle",
+  "organizationInfo": "Gestion de : {{organization}}",
+  "stats": {
+    "activeMembers": "Membres actifs",
+    "monthlyRevenue": "Revenu mensuel",
+    "classAttendance": "Présence aux cours",
+    "upcomingClasses": "Cours à venir"
+  },
+  "activity": {
+    "title": "Activité récente",
+    "newMember": "Nouveau membre inscrit",
+    "timeAgo": "il y a {{time}}"
+  },
+  "graphs": {
+    "membershipTrend": "Tendance des adhésions",
+    "totalMembers": "Total des membres",
+    "newMembers": "Nouveaux membres"
+  }
+}

@@ -1,3 +1,4 @@
+
 {
   "title": "الإعدادات",
   "subtitle": "إدارة إعدادات صالتك الرياضية",
@@ -5,38 +6,46 @@
     "saveSuccess": "تم حفظ الإعدادات بنجاح",
     "saveError": "فشل في حفظ الإعدادات"
   },
-  "billing": {
-    "title": "إعدادات الفواتير",
-    "currentPlan": "الخطة الحالية",
-    "currentPlanButton": "الخطة الحالية",
-    "switchPlanButton": "التحويل إلى هذه الخطة",
-    "paymentMethod": "طريقة الدفع",
-    "updateCard": "تحديث البطاقة",
-    "history": "سجل الفواتير",
-    "date": "التاريخ",
-    "amount": "المبلغ",
-    "status": "الحالة",
-    "download": "تحميل",
-    "downloadInvoice": "تحميل الفاتورة",
-    "plans": {
-      "basic": {
-        "name": "أساسي",
-        "feature1": "حتى 100 عضو",
-        "feature2": "تحليلات أساسية",
-        "feature3": "دعم بالبريد الإلكتروني"
-      },
-      "premium": {
-        "name": "بريميوم",
-        "feature1": "حتى 500 عضو",
-        "feature2": "تحليلات متقدمة",
-        "feature3": "دعم ذو أولوية"
-      },
-      "enterprise": {
-        "name": "مؤسسات",
-        "feature1": "أعضاء غير محدودين",
-        "feature2": "ميزات مخصصة",
-        "feature3": "دعم على مدار الساعة"
-      }
-    }
-  }
-}
+  "tabs": {
+    "general": "عام",
+    "notifications": "الإشعارات",
+    "security": "الأمان",
+    "billing": "الفواتير",
+    "team": "الفريق",
+    "privacy": "الخصوصية"
+  },
+  "general": {
+    "title": "الإعدادات العامة",
+    "gymName": "اسم الصالة",
+    "language": "اللغة",
+    "timezone": "المنطقة الزمنية",
+    "dateFormat": "تنسيق التاريخ",
+    "timeFormat": "تنسيق الوقت"
+  },
+  "notifications": {
+    "title": "إعدادات الإشعارات",
+    "browser": "إشعارات المتصفح",
+    "browserDescription": "استلام الإشعارات في المتصفح",
+    "browserPermissionDenied": "تم رفض إذن الإشعارات",
+    "email": "إشعارات البريد الإلكتروني",
+    "emailNewMembers": "تسجيلات الأعضاء الجدد",
+    "emailPayments": "تحديثات المدفوعات",
+    "emailClassBookings": "حجوزات الحصص",
+    "emailSystemUpdates": "تحديثات النظام",
+    "push": "الإشعارات الفورية",
+    "pushCheckIns": "تسجيل دخول الأعضاء",
+    "pushLowAttendance": "تنبيهات الحضور المنخفض",
+    "pushMembershipExpiry": "تذكير انتهاء العضوية",
+    "pushDailyReport": "التقارير اليومية"
+  },
+  "security": {
+    "title": "إعدادات الأمان",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "updatePassword": "تحديث كلمة المرور",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "passwordUpdateSuccess": "تم تحديث كلمة المرور بنجاح",
+    "passwordUpdateError": "فشل تحديث كلمة المرور",
+    "twoFactor": "المصادقة الثنائية",
+    "twoFactorDescription": "إضافة طبقة أمان إض

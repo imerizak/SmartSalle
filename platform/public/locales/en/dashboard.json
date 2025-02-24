@@ -1,0 +1,29 @@
+{
+  "overview": "Overview",
+  "members": "Members",
+  "coaches": "Coaches",
+  "attendance": "Attendance",
+  "schedule": "Schedule",
+  "payments": "Payments",
+  "analytics": "Analytics",
+  "settings": "Settings",
+  "events": "Events",
+  "welcomeMessage": "Welcome to your SmartSalle Dashboard",
+  "organizationInfo": "Managing: {{organization}}",
+  "stats": {
+    "activeMembers": "Active Members",
+    "monthlyRevenue": "Monthly Revenue",
+    "classAttendance": "Class Attendance",
+    "upcomingClasses": "Upcoming Classes"
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "newMember": "New Member Joined",
+    "timeAgo": "{{time}} ago"
+  },
+  "graphs": {
+    "membershipTrend": "Membership Trend",
+    "totalMembers": "Total Members",
+    "newMembers": "New Members"
+  }
+}

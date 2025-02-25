@@ -16,6 +16,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.text-black {
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
 /* RTL Support */
 [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;

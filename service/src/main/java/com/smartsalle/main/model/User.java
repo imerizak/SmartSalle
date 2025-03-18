@@ -2,7 +2,6 @@ package com.smartsalle.main.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
 import java.util.List;

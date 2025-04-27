@@ -3,6 +3,7 @@ package com.smartsalle.main.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NonNull;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -15,6 +16,9 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NonNull
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "gym_id", nullable = false)

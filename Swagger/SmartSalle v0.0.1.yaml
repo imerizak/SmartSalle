@@ -1,0 +1,437 @@
+openapi: 3.0.0
+info:
+  title: SmartSalle API
+  description: API pour la gestion de salle de sport (SmartSalle).
+  version: 1.0.0
+  contact:
+    email: support@smartsalle.com
+
+servers:
+  - url: http://localhost:8080/api
+    description: Serveur local pour développement
+  - url: https://api.smartsalle.com
+    description: Serveur de production
+
+paths:
+  # Gestion des utilisateurs (User)
+  /users:
+    get:
+      summary: Lister tous les utilisateurs
+      responses:
+        "200":
+          description: Liste des utilisateurs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+    post:
+      summary: Créer un nouvel utilisateur
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "201":
+          description: Utilisateur créé
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /users/{id}:
+    get:
+      summary: Récupérer un utilisateur par ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Détails de l'utilisateur
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "404":
+          description: Utilisateur non trouvé
+    put:
+      summary: Mettre à jour un utilisateur
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "200":
+          description: Utilisateur mis à jour
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    delete:
+      summary: Supprimer un utilisateur
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "204":
+          description: Utilisateur supprimé
+
+  # Gestion des salles de sport (Gym)
+  /gyms:
+    get:
+      summary: Lister toutes les salles de sport
+      responses:
+        "200":
+          description: Liste des salles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gym'
+    post:
+      summary: Créer une nouvelle salle de sport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gym'
+      responses:
+        "201":
+          description: Salle créée
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gym'
+
+  /gyms/{id}:
+    get:
+      summary: Récupérer une salle par ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Détails de la salle
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gym'
+
+  # Gestion des abonnements (Membership)
+  /memberships:
+    get:
+      summary: Lister tous les abonnements
+      responses:
+        "200":
+          description: Liste des abonnements
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Membership'
+    post:
+      summary: Créer un nouvel abonnement
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Membership'
+      responses:
+        "201":
+          description: Abonnement créé
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Membership'
+
+  # Gestion des paiements (Payment)
+  /payments:
+    get:
+      summary: Lister tous les paiements
+      responses:
+        "200":
+          description: Liste des paiements
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Payment'
+    post:
+      summary: Enregistrer un nouveau paiement
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Payment'
+      responses:
+        "201":
+          description: Paiement enregistré
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Payment'
+
+  # Gestion des sessions (Session)
+  /sessions:
+    get:
+      summary: Lister toutes les sessions
+      responses:
+        "200":
+          description: Liste des sessions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session'
+    post:
+      summary: Créer une nouvelle session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Session'
+      responses:
+        "201":
+          description: Session créée
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+
+  # Gestion des entraîneurs (Trainer)
+  /trainers:
+    get:
+      summary: Lister tous les entraîneurs
+      responses:
+        "200":
+          description: Liste des entraîneurs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trainer'
+    post:
+      summary: Créer un nouvel entraîneur
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trainer'
+      responses:
+        "201":
+          description: Entraîneur créé
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trainer'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique de l'utilisateur
+        firstName:
+          type: string
+          description: Prénom
+        lastName:
+          type: string
+          description: Nom de famille
+        email:
+          type: string
+          format: email
+          description: Adresse email
+        phone:
+          type: string
+          description: Numéro de téléphone
+        membershipId:
+          type: integer
+          format: int64
+          description: ID de l'abonnement associé
+      required:
+        - firstName
+        - lastName
+        - email
+
+    Gym:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique de la salle
+        name:
+          type: string
+          description: Nom de la salle
+        address:
+          type: string
+          description: Adresse physique
+        phone:
+          type: string
+          description: Numéro de contact
+      required:
+        - name
+        - address
+
+    Membership:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique de l'abonnement
+        userId:
+          type: integer
+          format: int64
+          description: ID de l'utilisateur associé
+        gymId:
+          type: integer
+          format: int64
+          description: ID de la salle associée
+        type:
+          type: string
+          enum:
+            - MONTHLY
+            - YEARLY
+            - TRIAL
+          description: Type d'abonnement
+        startDate:
+          type: string
+          format: date
+          description: Date de début
+        endDate:
+          type: string
+          format: date
+          description: Date de fin
+      required:
+        - userId
+        - gymId
+        - type
+        - startDate
+
+    Payment:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique du paiement
+        membershipId:
+          type: integer
+          format: int64
+          description: ID de l'abonnement associé
+        amount:
+          type: number
+          format: float
+          description: Montant du paiement
+        paymentDate:
+          type: string
+          format: date-time
+          description: Date du paiement
+        status:
+          type: string
+          enum:
+            - PENDING
+            - COMPLETED
+            - FAILED
+          description: Statut du paiement
+      required:
+        - membershipId
+        - amount
+        - paymentDate
+
+    Session:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique de la session
+        gymId:
+          type: integer
+          format: int64
+          description: ID de la salle associée
+        trainerId:
+          type: integer
+          format: int64
+          description: ID de l'entraîneur
+        name:
+          type: string
+          description: Nom de la session
+        startTime:
+          type: string
+          format: date-time
+          description: Heure de début
+        endTime:
+          type: string
+          format: date-time
+          description: Heure de fin
+        capacity:
+          type: integer
+          description: Capacité maximale
+      required:
+        - gymId
+        - name
+        - startTime
+        - endTime
+
+    Trainer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Identifiant unique de l'entraîneur
+        firstName:
+          type: string
+          description: Prénom
+        lastName:
+          type: string
+          description: Nom de famille
+        specialty:
+          type: string
+          description: Spécialité 
+        phone:
+          type: string
+          description: Numéro de téléphone
+      required:
+        - firstName
+        - lastName
+        - specialty

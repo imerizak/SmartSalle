@@ -18,12 +18,12 @@ import java.util.stream.Collectors;
 @Service
 public class MembershipService {
     private final MembershipRepository membershipRepository;
-    private final UserRepository userRepository;
+    private final UserService userService;
     private final GymRepository gymRepository;
 
-    public MembershipService(MembershipRepository membershipRepository, UserRepository userRepository, GymRepository gymRepository){
+    public MembershipService(MembershipRepository membershipRepository, UserService userService, GymRepository gymRepository){
         this.membershipRepository = membershipRepository;
-        this.userRepository = userRepository;
+        this.userService = userService;
         this.gymRepository = gymRepository;
     }
 
@@ -37,15 +37,7 @@ public class MembershipService {
 
     @Transactional
     public Membership addMembershipToGym(MembershipRequest membershipRequest){
-        User user = userRepository.findByEmail(membershipRequest.getUserEmail())
-                .orElseGet(() ->{
-                    User userObj = new User();
-                    userObj.setFirstName(membershipRequest.getUserFirstName());
-                    userObj.setLastName(membershipRequest.getUserLastName());
-                    userObj.setEmail(membershipRequest.getUserEmail());
-                    userObj.setPhone(membershipRequest.getUserPhone());
-                    return userRepository.save(userObj);
-                });
+        User user = userService.getOrCreateUser(membershipRequest.getUserEmail(),membershipRequest.getUserFirstName(), membershipRequest.getUserLastName(),membershipRequest.getUserPhone());
         Gym gym = gymRepository.findById(membershipRequest.getGymId())
                 .orElseThrow(EntityNotFoundException::new);
 

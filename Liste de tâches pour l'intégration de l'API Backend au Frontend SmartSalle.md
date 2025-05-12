@@ -1,0 +1,23 @@
+# Liste de tâches pour l'intégration de l'API Backend au Frontend SmartSalle
+
+- [x] Analyser les points d'appel API existants dans le code du frontend (services, composants, hooks).
+- [x] Identifier les fichiers et les fonctions spécifiques qui interagissent actuellement avec Supabase ou des données mockées pour la gestion des membres, coachs, présences, événements, et paiements.
+- [x] Adapter les services ou fonctions d'appel API dans le frontend pour utiliser les nouveaux endpoints Java REST.
+  - [x] Création d'un `apiClient.js` générique pour gérer les requêtes et l'authentification.
+  - [x] Création de `memberService.js`.
+  - [x] Création de `coachService.js`.
+  - [x] Création de `attendanceService.js`.
+  - [x] Création de `paymentService.js`.
+  - [x] Création de `eventService.js`.
+- [x] Mettre à jour les composants du frontend pour qu'ils consomment et affichent correctement les données provenant du nouveau backend.
+  - [x] Adaptation de `MembersPanel.jsx`.
+  - [x] Adaptation de `CoachesPanel.jsx`.
+  - [x] Adaptation de `AttendancePanel.jsx`.
+  - [x] Adaptation de `PaymentsPanel.jsx`.
+  - [x] Adaptation de `EventsPanel.jsx`.
+- [x] Configurer l'URL de base du backend Java dans l'environnement du frontend (via `.env.local` et `VITE_API_BASE_URL`).
+- [x] S'assurer que la gestion de l'authentification (tokens JWT Supabase) est correctement transmise et utilisée par le backend Java pour les requêtes sécurisées (via `apiClient.js`).
+- [ ] Tester chaque fonctionnalité du frontend (CRUD membres, CRUD coachs, gestion des présences, CRUD événements, gestion des paiements) pour valider l'intégration avec le backend.
+- [ ] Vérifier la gestion des erreurs et des états de chargement dans le frontend lors des appels au nouveau backend.
+- [ ] Préparer un rapport des modifications apportées au frontend.
+- [ ] Fournir le code frontend mis à jour à l'utilisateur.
